@@ -1,0 +1,11 @@
+[alias]
+	st = "status -sb"
+	ci = commit
+	co = checkout
+	br = branch
+	di = diff
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
