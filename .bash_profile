@@ -10,7 +10,7 @@ PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Ruby Version Manager
-if [[ -s /Users/pr0d1r2/.rvm/scripts/rvm ]] ; then source /Users/pr0d1r2/.rvm/scripts/rvm ; fi
+if [[ -s /Users/`whoami`/.rvm/scripts/rvm ]] ; then source /Users/`whoami`/.rvm/scripts/rvm ; fi
 
 # git aliases
 alias pm=".git/hooks/post-merge"
