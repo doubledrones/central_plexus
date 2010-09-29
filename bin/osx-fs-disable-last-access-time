@@ -1,0 +1,20 @@
+#!/bin/bash
+
+OUTPUT=/Library/LaunchDaemons/noatime.plist
+
+echo '<plist version="1.0">' > $OUTPUT
+echo '  <dict>' >> $OUTPUT
+echo '    <key>Label</key>' >> $OUTPUT
+echo '    <string>noatime</string>' >> $OUTPUT
+echo '    <key>ProgramArguments</key>' >> $OUTPUT
+echo '    <array>' >> $OUTPUT
+echo '      <string>mount</string>' >> $OUTPUT
+echo '      <string>-vuwo</string>' >> $OUTPUT
+echo '      <string>noatime</string>' >> $OUTPUT
+echo '      <string>/</string>' >> $OUTPUT
+echo '    </array>' >> $OUTPUT
+echo '    <key>RunAtLoad</key>' >> $OUTPUT
+echo '    <true/>' >> $OUTPUT
+echo '  </dict>' >> $OUTPUT
+echo '</plist>' >> $OUTPUT
+
