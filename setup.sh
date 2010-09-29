@@ -15,3 +15,7 @@ ln -s ~/projects/central_plexus/.gemrc ~/
 
 rvm install
 rvm update --head
+
+if [ ! -e ~/bin ]; then
+  ln -s ~/projects/central_plexus/bin ~/
+fi

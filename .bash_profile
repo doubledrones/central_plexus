@@ -12,6 +12,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Postgresql 8.4 for building gems and dependent packages
 export PATH="/opt/local/lib/postgresql84/bin:$PATH"
 
+# Home directory binaries and scripts
+export PATH="~/bin:$PATH"
+
 # Ruby Version Manager
 if [[ -s /Users/`whoami`/.rvm/scripts/rvm ]] ; then source /Users/`whoami`/.rvm/scripts/rvm ; fi
 
