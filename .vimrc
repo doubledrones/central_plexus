@@ -93,3 +93,9 @@ function! InsertTabWrapper(direction)
 endfunction
 inoremap <Tab> <C-R>=InsertTabWrapper("backward")<cr>
 inoremap <S-Tab> <C-R>=InsertTabWrapper("forward")<cr>
+
+" Run fullscreen by default
+if has("gui_running")
+  au GUIEnter * set fullscreen
+  set fuoptions=maxvert,maxhorz
+endif
