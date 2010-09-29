@@ -34,9 +34,10 @@ set showmode
 " Show command in right-bottom corner of screen
 set showcmd
 
-" TODO Show non printable characrters (spaces, tabs and EOLs)
-"set listchars=tab:>-,trail:-,eol:¬
-"set list
+" Show non printable characters (spaces, tabs and EOLs)
+" '¬' requires utf-8 compatible terminal
+set listchars=tab:>-,trail:-,eol:¬
+set list
 
 " Move last single character into another line
 set formatoptions+=1
