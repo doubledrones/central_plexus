@@ -112,5 +112,7 @@ map <D-7> :tabn 7<CR>
 map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 map <D-0> :tabn 10<CR>
+nmap <D-r> :wall<CR>:Rake<CR>
 imap <D-r> <Esc>:wall<CR>:Rake<CR>
+nmap <D-R> :wall<CR>:.Rake<CR>
 imap <D-R> <Esc>:wall<CR>:.Rake<CR>
