@@ -19,3 +19,5 @@ rvm update --head
 if [ ! -e ~/bin ]; then
   ln -s ~/projects/central_plexus/bin ~/
 fi
+
+ln -s ~/projects/central_plexus/.vimrc ~/
