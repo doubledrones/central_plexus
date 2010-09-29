@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+command = ARGV.join(" ")
+
+system(command)
+
+`growlnotify -t \"#{command}\" -m \"Done.\" -s`
+
