@@ -4,6 +4,7 @@
 	co = checkout
 	br = branch
 	di = diff
+	diw = "diff --word-diff"
 [color]
 	branch = auto
 	diff = auto
