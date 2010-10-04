@@ -21,3 +21,8 @@ if [[ -s /Users/`whoami`/.rvm/scripts/rvm ]] ; then source /Users/`whoami`/.rvm/
 # git aliases
 alias pm=".git/hooks/post-merge"
 alias gpm="g .git/hooks/post-merge"
+
+# rails aliases
+alias migrate="rake db:migrate && rake db:test:clone"
+alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:test:clone"
+alias dbfromscratch="rake db:drop && rake db:create && rake db:migrate && rake db:test:clone"
