@@ -23,3 +23,8 @@ if [ ! -e ~/bin ]; then
 fi
 
 ln -s ~/projects/central_plexus/.vimrc ~/
+
+# menubar icons with empty one for minimalist desktop
+~/bin/osx-menubar-hide-dropbox
+~/bin/osx-menubar-hide-airfoil-speakers
+
