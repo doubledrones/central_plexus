@@ -49,6 +49,9 @@ end
 
 Dir.mkdir('autoload') unless File.directory?('autoload')
 Dir.chdir('autoload')
-File.delete('pathogen.vim')
+begin
+  File.delete('pathogen.vim')
+rescue
+end
 File.symlink('../misc/vim-pathogen/autoload/pathogen.vim', 'pathogen.vim')
 
