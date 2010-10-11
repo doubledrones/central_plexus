@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+export LC_CTYPE="UTF-8"
 
 # prompt containing git branch
 function parse_git_branch {
