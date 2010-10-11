@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -d ~/.vim/colors ]; then
+  mkdir -p ~/.vim/colors
+fi
+
+cp -vp resources/blackboard.vim ~/.vim/colors/
+

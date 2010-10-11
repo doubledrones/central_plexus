@@ -28,6 +28,7 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 ~/bin/osx-menubar-hide-dropbox
 ~/bin/osx-menubar-hide-airfoil-speakers
 
-# Setup MacVim bundles
+# Setup MacVim
 ~/bin/osx-macvim-bundle-setup
+~/bin/osx-macvim-color-setup
 
