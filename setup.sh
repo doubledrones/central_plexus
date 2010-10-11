@@ -32,3 +32,6 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 ~/bin/osx-macvim-bundle-setup
 ~/bin/osx-macvim-color-setup
 
+# Mac OS X Dock setup
+~/bin/osx-dock-remove-all-items
+
