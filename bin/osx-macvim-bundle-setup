@@ -2,7 +2,8 @@
 
 Dir.chdir ENV['HOME']
 
-bundles = {
+resources = {
+  'bundle' => {
     'ack.vim'        => 'git://github.com/mileszs/ack.vim.git',
     'nerdcommenter'  => 'git://github.com/scrooloose/nerdcommenter.git',
     'nerdtree'       => 'git://github.com/scrooloose/nerdtree.git',
@@ -19,22 +20,35 @@ bundles = {
     'vim-surround'   => 'git://github.com/tpope/vim-surround.git',
     'vim-unimpaired' => 'git://github.com/tpope/vim-unimpaired.git',
     'vim-vividchalk' => 'git://github.com/tpope/vim-vividchalk.git'
+  },
+  'misc' => {
+    'vim-pathogen'   => 'http://github.com/tpope/vim-pathogen.git'
+  }
 }
 
 Dir.mkdir('.vim') unless File.directory?('.vim')
 Dir.chdir('.vim')
-Dir.mkdir('bundle') unless File.directory?('bundle')
-Dir.chdir('bundle')
 
-bundles.each do |bundle_name, repository|
-  puts
-  puts "#{bundle_name} (#{repository})"
-  if File.directory?(bundle_name)
-    Dir.chdir(bundle_name)
-    system("git pull")
-    Dir.chdir('..')
-  else
-    system("git clone #{repository} #{bundle_name}")
+resources.each do |resource,parts|
+  Dir.mkdir(resource) unless File.directory?(resource)
+  Dir.chdir(resource)
+
+  parts.each do |bundle_name, repository|
+    puts
+    puts "#{bundle_name} (#{repository})"
+    if File.directory?(bundle_name)
+      Dir.chdir(bundle_name)
+      system("git pull")
+      Dir.chdir('..')
+    else
+      system("git clone #{repository} #{bundle_name}")
+    end
   end
+  Dir.chdir('..')
 end
+
+Dir.mkdir('autoload') unless File.directory?('autoload')
+Dir.chdir('autoload')
+File.delete('pathogen.vim')
+File.symlink('../misc/vim-pathogen/autoload/pathogen.vim', 'pathogen.vim')
 
