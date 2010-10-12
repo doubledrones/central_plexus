@@ -1,0 +1,15 @@
+#!/bin/sh
+
+UUID=`ioreg -rd1 -c IOPlatformExpertDevice | grep -E '(UUID)' | cut -f 4 -d \"`
+
+defaults write ByHost/com.apple.systemuiserver.$UUID \
+dontAutoLoad \
+-array \
+"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+"/System/Library/CoreServices/Menu Extras/Volume.menu" \
+"/System/Library/CoreServices/Menu Extras/Clock.menu"
+
+killall SystemUIServer
+

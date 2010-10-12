@@ -35,3 +35,6 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 # Mac OS X Dock setup
 ~/bin/osx-dock-remove-all-items
 
+# Mac OS X menubar setup
+~/bin/osx-menubar-remove-all
+
