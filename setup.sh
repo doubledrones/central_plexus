@@ -27,6 +27,7 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 # menubar icons with empty one for minimalist desktop
 ~/bin/osx-menubar-hide-dropbox
 ~/bin/osx-menubar-hide-airfoil-speakers
+~/bin/osx-menubar-hide-shimo
 
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
