@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Installing: Mozilla Prism"
+
+cd /tmp
+curl http://download.skype.com/macosx/Skype_2.8.0.851.dmg -o Skype_2.8.0.851.dmg
+open Skype_2.8.0.851.dmg
+sleep 1
+rsync -a /Volumes/Skype/Skype.app/ /Applications/Skype.app/
+sleep 1
+diskutil umount /Volumes/Skype/
+sleep 1
+rm -f Skype_2.8.0.851.dmg
+

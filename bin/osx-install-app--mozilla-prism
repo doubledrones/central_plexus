@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Installing: Mozilla Prism"
+
+cd /tmp
+curl http://people.mozilla.com/~mfinkle/prism/prism-0.8-mac.dmg -o prism-0.8-mac.dmg
+open prism-0.8-mac.dmg
+sleep 1
+rsync -a /Volumes/prism/Prism.app/ /Applications/Prism.app/
+sleep 1
+diskutil umount /Volumes/prism/
+sleep 1
+rm -f prism-0.8-mac.dmg
+
