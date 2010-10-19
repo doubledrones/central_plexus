@@ -95,11 +95,10 @@ endfunction
 inoremap <Tab> <C-R>=InsertTabWrapper("backward")<cr>
 inoremap <S-Tab> <C-R>=InsertTabWrapper("forward")<cr>
 
-" Run fullscreen by default
-"if has("gui_running")
-"  au GUIEnter * set fullscreen
-"  set fuoptions=maxvert,maxhorz
-"endif
+" Maximalize on fullscreen
+if has("gui_running")
+  set fuoptions=maxvert,maxhorz
+endif
 
 " Hot keys
 map <D-1> :tabn 1<CR>
