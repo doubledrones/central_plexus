@@ -1,0 +1,16 @@
+#!/bin/sh
+
+VERSION=99371
+
+echo "Installing: Evernote"
+
+cd /tmp
+curl http://evernote.s3.amazonaws.com/mac/release/Evernote_$VERSION.dmg -o Evernote_$VERSION.dmg
+hdiutil convert -ov -format UDRW -o Evernote_$VERSION.dmg.rw.dmg Evernote_$VERSION.dmg
+hdiutil attach -noautoopen -noidme Evernote_$VERSION.dmg.rw.dmg
+sleep 1
+rsync -a /Volumes/Evernote/Evernote.app/ /Applications/Evernote.app/
+sleep 1
+hdiutil unmount -force /Volumes/Evernote
+sleep 1
+rm -f Evernote_$VERSION.dmg.rw.dmg Evernote_$VERSION.dmg
