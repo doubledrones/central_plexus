@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+BIG_SWAP = 2048
+
+swap_size = `du -m -c /private/var/vm/swapfile* | grep total | awk '{ print $1 }'`.strip
+
+if swap_size.to_i > BIG_SWAP
+  `growlnotify -t \"Swap Monitor\" -m \"You have a big swap: #{swap_size}M\" -s`
+end
