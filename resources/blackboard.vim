@@ -35,6 +35,11 @@ if has("gui_running")
   highlight Search guibg=#1C3B79
   highlight PreProc guifg=#FF5600
 
+  " NonText
+  highlight NonText guifg=#393D4D
+  highlight clear SpecialKey
+  highlight link SpecialKey NonText
+
   "HTML Colors
   highlight link htmlTag Type
   highlight link htmlEndTag htmlTag
