@@ -1,0 +1,5 @@
+#!/bin/bash
+
+osx-minimalistic
+osx-enable-single-application-mode
+

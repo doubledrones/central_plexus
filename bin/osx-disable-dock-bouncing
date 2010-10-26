@@ -1,0 +1,6 @@
+#!/bin/bash
+
+defaults write com.apple.dock no-bouncing -bool true
+
+killall Dock
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+osx-disable-glass-dock
+osx-disable-dashboard
+osx-disable-dock-bouncing
+osx-disable-crash-reporter
+
+osx-menubar-solid
+

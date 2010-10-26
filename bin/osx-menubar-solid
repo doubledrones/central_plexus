@@ -1,0 +1,4 @@
+#!/bin/bash
+
+defaults write /System/Library/LaunchDaemons/com.apple.WindowServer 'EnvironmentVariables' -dict 'CI_NO_BACKGROUND_IMAGE' 0
+
