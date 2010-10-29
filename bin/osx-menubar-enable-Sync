@@ -1,0 +1,4 @@
+#\!/bin/sh
+
+open /System/Library/CoreServices/Menu\ Extras/Sync.menu
+
