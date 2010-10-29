@@ -2,4 +2,6 @@
 
 osx-minimalistic
 osx-enable-single-application-mode
+osx-dock-remove-all-items
+osx-menubar-remove-all
 
