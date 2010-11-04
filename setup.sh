@@ -1,6 +1,10 @@
 #!/bin/sh
 
-rvm-install
+RVM_INSTALL=$HOME/.gem/ruby/1.8/bin/rvm-install
+if [ ! -x $RVM_INSTALL ]; then
+  gem install rvm
+fi
+$RVM_INSTALL
 
 ln -s ~/projects/central_plexus/.bash_profile ~/
 source ~/.bash_profile
