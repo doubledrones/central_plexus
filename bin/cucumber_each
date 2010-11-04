@@ -2,9 +2,16 @@
 
 for FEATURE in `ls -dr features/*.feature`
 do
-  echo
-  echo $FEATURE
-  echo
-  cucumber $FEATURE || exit $?
-  echo
+  case $@ in
+    *$FEATURE*)
+      echo "Ommiting feature: $FEATURE"
+      ;;
+    *)
+      echo
+      echo $FEATURE
+      echo
+      cucumber $FEATURE || exit $?
+      echo
+      ;;
+  esac
 done
