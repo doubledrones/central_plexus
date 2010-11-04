@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for FEATURE in `ls -dr features/*.feature`
+do
+  echo
+  echo $FEATURE
+  echo
+  cucumber $FEATURE || exit $?
+  echo
+done
