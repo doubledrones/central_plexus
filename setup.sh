@@ -44,3 +44,6 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
 
+# ACK setup
+~/bin/ack-setup
+
