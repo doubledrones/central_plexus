@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Together with preference Open files from applications: in the current window
+# opening files in new tabs.
+
+open $@ -a MacVim
+
