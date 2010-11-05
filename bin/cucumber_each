@@ -1,17 +1,31 @@
 #!/bin/sh
 
+DONE=`cat cucumber_each.done`
+
 for FEATURE in `ls -dr features/*.feature`
 do
-  case $@ in
+  case $DONE in
     *$FEATURE*)
-      echo "Ommiting feature: $FEATURE"
+      echo "Ommiting done feature: $FEATURE"
       ;;
     *)
-      echo
-      echo $FEATURE
-      echo
-      cucumber $FEATURE || exit $?
-      echo
+      case $@ in
+        *$FEATURE*)
+          echo "Ommiting feature: $FEATURE"
+          ;;
+        *)
+          echo
+          echo $FEATURE
+          echo
+          cucumber $FEATURE ; ERR=$?
+          if [ $ERR -eq 0 ]; then
+            echo $FEATURE >> cucumber_each.done
+          else
+            exit $ERR
+          fi
+          echo
+          ;;
+      esac
       ;;
   esac
 done
