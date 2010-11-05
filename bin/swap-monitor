@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-BIG_SWAP = 2048
+BIG_SWAP = 2047
 
 swap_size = `du -m -c /private/var/vm/swapfile* | grep total | awk '{ print $1 }'`.strip
 
