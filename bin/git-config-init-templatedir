@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CURRENT_TEMPLATEDIR=`git config init.templatedir`
+
+if [ -z "$CURRENT_TEMPLATEDIR" ]; then
+  git config --global init.templatedir "~/projects/central_plexus/resources/git-template"
+else
+  echo "git config init.templatedir is already set to: $CURRENT_TEMPLATEDIR"
+  exit 1
+fi

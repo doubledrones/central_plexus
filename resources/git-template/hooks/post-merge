@@ -1,0 +1,39 @@
+#!/bin/sh -e
+
+if [ -e log/development.log ]; then
+  > log/development.log
+fi
+
+if [ -e log/cucumber.log ]; then
+  rm log/cucumber.log && \
+  ln -sf /dev/null log/cucumber.log
+fi
+
+if [ -e log/test.log ]; then
+  rm log/test.log && \
+  ln -sf /dev/null log/test.log
+fi
+
+if [ -e Gemfile ]; then
+  unset GIT_DIR
+  bundle install
+fi
+
+if [ -e Rakefile ]; then
+  if [ -e db/migrate ]; then
+    rake db:migrate
+    rake db:test:clone
+  fi
+
+  if [ -e spec ]; then
+    rake spec
+    #rake specjour
+  fi
+
+  if [ -e features ]; then
+    rake cucumber
+    #rake specjour:cucumber
+  fi
+fi
+
+git pull

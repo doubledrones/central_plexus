@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+LAST_COMMIT_MESSAGE="LAST_COMMIT"
+
+LAST_COMMIT_STASH=`git stash list | grep $LAST_COMMIT_MESSAGE | cut -f 1 -d :`
+if [ -n "$LAST_COMMIT_STASH" ]; then
+  git stash drop $LAST_COMMIT_STASH
+fi
+git stash save $LAST_COMMIT_MESSAGE
+git stash apply -q
+
+git pull
