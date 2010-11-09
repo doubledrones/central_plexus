@@ -21,6 +21,7 @@ do
           if [ $ERR -eq 0 ]; then
             echo $FEATURE >> cucumber_each.done
           else
+            mvi $FEATURE
             exit $ERR
           fi
           echo
