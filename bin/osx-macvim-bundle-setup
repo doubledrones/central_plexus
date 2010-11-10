@@ -19,7 +19,8 @@ resources = {
     'vim-repeat'     => 'git://github.com/tpope/vim-repeat.git',
     'vim-surround'   => 'git://github.com/tpope/vim-surround.git',
     'vim-unimpaired' => 'git://github.com/tpope/vim-unimpaired.git',
-    'vim-vividchalk' => 'git://github.com/tpope/vim-vividchalk.git'
+    'vim-vividchalk' => 'git://github.com/tpope/vim-vividchalk.git',
+    'tabular'        => 'https://github.com/godlygeek/tabular.git'
   },
   'misc' => {
     'vim-pathogen'   => 'http://github.com/tpope/vim-pathogen.git'
