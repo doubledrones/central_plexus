@@ -40,10 +40,12 @@ ln -s ~/projects/central_plexus/.vimrc ~/
 
 # Mac OS X Dock setup
 ~/bin/osx-dock-remove-all-items
+~/bin/osx-dock-autohide-enable
+~/bin/osx-dock-lock
 
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
+~/bin/osx-menubar-enable-User
 
 # ACK setup
 ~/bin/ack-setup
-
