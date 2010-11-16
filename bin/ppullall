@@ -1,0 +1,21 @@
+#!/bin/sh
+
+cd ~/projects
+
+for PROJECT in *
+do
+  if [ -d $PROJECT/.git ]; then
+    cd $PROJECT
+    STATUS=`git st`
+    case $STATUS in
+      "## master")
+        echo
+        echo $PROJECT
+        git pull
+        ;;
+    esac
+    cd ..
+  fi
+done
+echo
+
