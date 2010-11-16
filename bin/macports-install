@@ -1,0 +1,27 @@
+#!/bin/sh -ev
+
+curl http://distfiles.macports.org/MacPorts/MacPorts-1.9.2.tar.bz2 -o /tmp/MacPorts-1.9.2.tar.bz2
+
+cd /tmp
+tar xvjf MacPorts-1.9.2.tar.bz2
+cd MacPorts-1.9.2
+
+./configure \
+  --with-no-root-privileges \
+  --prefix=$HOME/.macports \
+  --enable-readline \
+  --with-install-user=`id -un` \
+  --with-install-group=`id -gn` \
+  --with-tclpackage=$HOME/.macports/share/macports/Tcl
+
+make
+make install
+
+cd
+
+export PATH="~/.macports/bin:$PATH"
+
+port -v selfupdate
+
+rm -rf /tmp/MacPorts-1.9.2
+rm /tmp/MacPorts-1.9.2.tar.bz2

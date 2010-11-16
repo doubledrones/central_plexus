@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+PORTS="
+git-core
+htop
+p5-app-ack
+pbzip2
+watch
+wget
+"
+
+# TODO replate to for
+echo "$PORTS" | while read line
+do
+  if [ -n "$line" ]
+  then
+    port install $line
+  fi
+done
