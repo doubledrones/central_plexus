@@ -6,16 +6,10 @@ for PROJECT in *
 do
   if [ -d $PROJECT/.git ]; then
     cd $PROJECT
-    STATUS=`git st`
-    case $STATUS in
-      "## master")
-        echo
-        echo $PROJECT
-        git pull
-        ;;
-    esac
+    if `git-clean`; then
+      git pull
+    fi
     cd ..
   fi
 done
 echo
-
