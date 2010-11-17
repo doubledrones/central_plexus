@@ -8,7 +8,7 @@ function parse_git_branch {
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\[\033[01;34m\]\$\[\033[00m\] "
 
 # MacPorts
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="~/.macports/bin:~/.macports/sbin:$PATH"
 
 # Postgresql 8.4 for building gems and dependent packages
 export PATH="/opt/local/lib/postgresql84/bin:$PATH"
