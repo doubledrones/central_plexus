@@ -28,12 +28,6 @@ if [ ! -L ~/.vimrc ]; then
   ln -s ~/projects/central_plexus/.vimrc ~/
 fi
 
-# menubar icons with empty one for minimalist desktop
-~/bin/osx-menubar-hide-dropbox
-~/bin/osx-menubar-hide-airfoil-speakers
-~/bin/osx-menubar-hide-shimo
-~/bin/osx-menubar-hide-ccmenu
-
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
 ~/bin/osx-macvim-color-setup
