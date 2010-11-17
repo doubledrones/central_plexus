@@ -35,6 +35,7 @@ fi
 # Mac OS X Dock setup
 ~/bin/osx-dock-remove-all-items
 ~/bin/osx-dock-autohide-enable
+~/bin/osx-dock-glass-disable
 ~/bin/osx-dock-lock
 
 # Mac OS X menubar setup
