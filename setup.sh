@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -ev
 
 RVM_INSTALL=$HOME/.gem/ruby/1.8/bin/rvm-install
 if [ ! -x $RVM_INSTALL ]; then
