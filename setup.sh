@@ -38,6 +38,9 @@ fi
 ~/bin/osx-dock-glass-disable
 ~/bin/osx-dock-lock
 
+# Mac OS X dashboard
+~/bin/osx-dashboard-disable
+
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
 ~/bin/osx-menubar-enable-User
