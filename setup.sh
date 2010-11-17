@@ -6,7 +6,9 @@ if [ ! -x $RVM_INSTALL ]; then
 fi
 $RVM_INSTALL
 
-ln -s ~/projects/central_plexus/.bash_profile ~/
+if [ ! -L ~/.bash_profile ]; then
+  ln -s ~/projects/central_plexus/.bash_profile ~/
+fi
 source ~/.bash_profile
 
 rvm update --edge
@@ -20,13 +22,17 @@ read GIT_EMAIL
 git config --global user.name "$GIT_NAME"
 git config --global user.email "$GIT_EMAIL"
 
-ln -s ~/projects/central_plexus/.gemrc ~/
+if [ ! -L ~/.gemrc ]; then
+  ln -s ~/projects/central_plexus/.gemrc ~/
+fi
 
 if [ ! -e ~/bin ]; then
   ln -s ~/projects/central_plexus/bin ~/
 fi
 
-ln -s ~/projects/central_plexus/.vimrc ~/
+if [ ! -L ~/.vimrc ]; then
+  ln -s ~/projects/central_plexus/.vimrc ~/
+fi
 
 # menubar icons with empty one for minimalist desktop
 ~/bin/osx-menubar-hide-dropbox
