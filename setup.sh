@@ -2,7 +2,7 @@
 
 RVM_INSTALL=$HOME/.gem/ruby/1.8/bin/rvm-install
 if [ ! -x $RVM_INSTALL ]; then
-  gem install rvm
+  gem install rvm --verbose
 fi
 $RVM_INSTALL
 
