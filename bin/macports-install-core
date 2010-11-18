@@ -7,6 +7,7 @@ p5-app-ack
 pbzip2
 watch
 wget
+macvim
 "
 
 # TODO replate to for
