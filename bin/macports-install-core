@@ -8,6 +8,7 @@ pbzip2
 lzmautils
 watch
 wget
+macvim
 "
 
 # TODO replate to for
