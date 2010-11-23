@@ -16,7 +16,7 @@ if [ ! -f prism-$VERSION-mac.dmg.ok ]; then
 fi
 open prism-$VERSION-mac.dmg
 sleep 1
-rsync -a /Volumes/prism/Prism.app/ /Applications/Prism.app/
+rsync -a /Volumes/prism/Prism.app/ ~/Applications/Prism.app/
 sleep 1
 diskutil umount /Volumes/prism/
 
