@@ -1,0 +1,21 @@
+#!/bin/sh -ev
+
+VERSION="0.7.110"
+
+echo "Installing: Dropbox"
+
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f Dropbox-$VERSION.dmg.ok ]; then
+  curl http://cdn.dropbox.com/Dropbox%20$VERSION.dmg -o Dropbox-$VERSION.dmg
+  hdiutil verify Dropbox-$VERSION.dmg
+  touch Dropbox-$VERSION.dmg.ok
+fi
+open Dropbox-$VERSION.dmg
+sleep 1
+rsync -a /Volumes/Dropbox\ Installer/Dropbox.app/ ~/Applications/Dropbox.app/
+sleep 1
+diskutil umount /Volumes/Dropbox\ Installer/
