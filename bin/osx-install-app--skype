@@ -1,14 +1,21 @@
-#!/bin/sh
+#!/bin/sh -ev
+
+VERSION="2.8.0.851"
 
 echo "Installing: Mozilla Prism"
 
-cd /tmp
-curl http://download.skype.com/macosx/Skype_2.8.0.851.dmg -o Skype_2.8.0.851.dmg
-open Skype_2.8.0.851.dmg
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f Skype_$VERSION.dmg.ok ]; then
+  curl http://download.skype.com/macosx/Skype_$VERSION.dmg -o Skype_$VERSION.dmg
+  hdiutil verify Skype_$VERSION.dmg
+  touch Skype_$VERSION.dmg.ok
+fi
+open Skype_$VERSION.dmg
 sleep 1
-rsync -a /Volumes/Skype/Skype.app/ /Applications/Skype.app/
+rsync -a /Volumes/Skype/Skype.app/ ~/Applications/Skype.app/
 sleep 1
 diskutil umount /Volumes/Skype/
-sleep 1
-rm -f Skype_2.8.0.851.dmg
-

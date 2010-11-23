@@ -1,14 +1,19 @@
-#!/bin/sh
+#!/bin/sh -ev
 
 echo "Installing: Clean My Mac"
 
-cd /tmp
-curl http://dl.macpaw.com/CleanMyMac.dmg -o CleanMyMac.dmg
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f CleanMyMac.dmg.ok ]; then
+  curl http://dl.macpaw.com/CleanMyMac.dmg -o CleanMyMac.dmg
+  hdiutil verify CleanMyMac.dmg
+  touch CleanMyMac.dmg.ok
+fi
 open CleanMyMac.dmg
 sleep 1
 rsync -a /Volumes/CleanMyMac/CleanMyMac.app/ /Applications/CleanMyMac.app/
 sleep 1
 diskutil umount /Volumes/CleanMyMac/
-sleep 1
-rm -f CleanMyMac.dmg
-
