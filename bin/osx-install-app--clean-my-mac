@@ -14,6 +14,6 @@ if [ ! -f CleanMyMac.dmg.ok ]; then
 fi
 open CleanMyMac.dmg
 sleep 1
-rsync -a /Volumes/CleanMyMac/CleanMyMac.app/ /Applications/CleanMyMac.app/
+rsync -a /Volumes/CleanMyMac/CleanMyMac.app/ ~/Applications/CleanMyMac.app/
 sleep 1
 diskutil umount /Volumes/CleanMyMac/
