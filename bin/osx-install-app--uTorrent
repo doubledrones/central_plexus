@@ -1,0 +1,24 @@
+#!/bin/sh -ev
+
+VERSION="22592"
+
+echo "Installing: uTorrent"
+
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f uTorrent-Mac-$VERSION.dmg.ok ]; then
+  curl http://download.utorrent.com/mac/uTorrent-Mac-$VERSION.dmg -o uTorrent-Mac-$VERSION.dmg
+  hdiutil verify uTorrent-Mac-$VERSION.dmg
+  touch uTorrent-Mac-$VERSION.dmg.ok
+fi
+if [ ! -d ~/Applications/ ]; then
+  mkdir -p ~/Applications/
+fi
+open uTorrent-Mac-$VERSION.dmg
+sleep 1
+rsync -a /Volumes/uTorrent/uTorrent.app/ ~/Applications/uTorrent.app/
+sleep 1
+diskutil umount /Volumes/uTorrent/
