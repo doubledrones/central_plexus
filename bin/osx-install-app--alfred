@@ -22,3 +22,5 @@ sleep 1
 rsync -a /Volumes/Alfred.app/Alfred.app/ ~/Applications/Alfred.app/
 sleep 1
 diskutil umount /Volumes/Alfred.app/
+
+open ~/Applications/Alfred.app/
