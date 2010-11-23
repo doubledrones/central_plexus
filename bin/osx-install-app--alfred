@@ -1,0 +1,24 @@
+#!/bin/sh -ev
+
+VERSION="0.7.2_beta_73"
+
+echo "Installing: Alfred"
+
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f Skype_$VERSION.dmg.ok ]; then
+  curl http://media.alfredapp.com/alfred_$VERSION.dmg -o alfred_$VERSION.dmg
+  hdiutil verify alfred_$VERSION.dmg
+  touch alfred_$VERSION.dmg.ok
+fi
+if [ ! -d ~/Applications/ ]; then
+  mkdir -p ~/Applications/
+fi
+open alfred_$VERSION.dmg
+sleep 1
+rsync -a /Volumes/Alfred.app/Alfred.app/ ~/Applications/Alfred.app/
+sleep 1
+diskutil umount /Volumes/Alfred.app/
