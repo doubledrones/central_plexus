@@ -2,7 +2,7 @@
 
 VERSION="2.8.0.851"
 
-echo "Installing: Mozilla Prism"
+echo "Installing: Skype"
 
 if [ ! -d ~/Library/Caches/central_plexus ]; then
   mkdir -p ~/Library/Caches/central_plexus
