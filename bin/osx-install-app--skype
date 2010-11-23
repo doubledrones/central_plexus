@@ -14,6 +14,9 @@ if [ ! -f Skype_$VERSION.dmg.ok ]; then
   hdiutil verify Skype_$VERSION.dmg
   touch Skype_$VERSION.dmg.ok
 fi
+if [ ! -d ~/Applications/ ]; then
+  mkdir -p ~/Applications/
+fi
 open Skype_$VERSION.dmg
 sleep 1
 rsync -a /Volumes/Skype/Skype.app/ ~/Applications/Skype.app/

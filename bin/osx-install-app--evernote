@@ -14,6 +14,9 @@ if [ ! -f Evernote_$VERSION.dmg.ok ]; then
   hdiutil verify Evernote_$VERSION.dmg
   touch Evernote_$VERSION.dmg.ok
 fi
+if [ ! -d ~/Applications/ ]; then
+  mkdir -p ~/Applications/
+fi
 hdiutil convert -ov -format UDRW -o Evernote_$VERSION.dmg.rw.dmg Evernote_$VERSION.dmg
 hdiutil attach -noautoopen -noidme Evernote_$VERSION.dmg.rw.dmg
 sleep 1
