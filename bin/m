@@ -1,0 +1,1 @@
+mc --colors directory=green,default:executable=brightgreen,default:link=brightcyan,default:device=brightblue,default:special=brightred,default:normal=lightgray,default:selected=black,lightgray:marked=cyan,default:markselect=cyan,brown:core=cyan,default
