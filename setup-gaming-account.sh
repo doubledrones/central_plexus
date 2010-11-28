@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -ev
 
 ln -s ~/projects/central_plexus/.bash_profile ~/
 source ~/.bash_profile
