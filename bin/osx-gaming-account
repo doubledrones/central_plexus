@@ -3,6 +3,8 @@
 osx-minimalistic
 osx-enable-single-application-mode
 osx-dock-remove-all-items
+osx-dock-glass-enable
+osx-dock-lock
 osx-menubar-remove-all
 osx-menubar-enable-User
-
+osx-dock-restart

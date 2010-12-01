@@ -1,14 +1,25 @@
-#!/bin/sh
+#!/bin/sh -ev
+
+VERSION="0.8"
 
 echo "Installing: Mozilla Prism"
 
-cd /tmp
-curl http://people.mozilla.com/~mfinkle/prism/prism-0.8-mac.dmg -o prism-0.8-mac.dmg
-open prism-0.8-mac.dmg
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
+
+cd ~/Library/Caches/central_plexus
+if [ ! -f prism-$VERSION-mac.dmg.ok ]; then
+  curl http://people.mozilla.com/~mfinkle/prism/prism-$VERSION-mac.dmg -o prism-$VERSION-mac.dmg
+  hdiutil verify prism-$VERSION-mac.dmg
+  touch prism-$VERSION-mac.dmg.ok
+fi
+if [ ! -d ~/Applications/ ]; then
+  mkdir -p ~/Applications/
+fi
+hdiutil attach -noautoopen -noidme prism-$VERSION-mac.dmg
 sleep 1
-rsync -a /Volumes/prism/Prism.app/ /Applications/Prism.app/
+rsync -a /Volumes/prism/Prism.app/ ~/Applications/Prism.app/
 sleep 1
 diskutil umount /Volumes/prism/
-sleep 1
-rm -f prism-0.8-mac.dmg
 

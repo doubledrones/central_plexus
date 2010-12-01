@@ -1,10 +1,20 @@
 #!/bin/sh -ev
 
-curl http://distfiles.macports.org/MacPorts/MacPorts-1.9.2.tar.bz2 -o /tmp/MacPorts-1.9.2.tar.bz2
+if [ ! -d ~/Library/Caches/central_plexus ]; then
+  mkdir -p ~/Library/Caches/central_plexus
+fi
 
-cd /tmp
-tar xvjf MacPorts-1.9.2.tar.bz2
-cd MacPorts-1.9.2
+cd ~/Library/Caches/central_plexus
+if [ ! -f MacPorts-1.9.2.tar.bz2.ok ]; then
+  curl http://distfiles.macports.org/MacPorts/MacPorts-1.9.2.tar.bz2 -o MacPorts-1.9.2.tar.bz2
+  cd /tmp
+  tar xvjf ~/Library/Caches/central_plexus/MacPorts-1.9.2.tar.bz2 -C /tmp/
+  touch MacPorts-1.9.2.tar.bz2.ok
+else
+  tar xvjf ~/Library/Caches/central_plexus/MacPorts-1.9.2.tar.bz2 -C /tmp/
+fi
+
+cd /tmp/MacPorts-1.9.2
 
 ./configure \
   --with-no-root-privileges \
@@ -24,4 +34,3 @@ export PATH="~/.macports/bin:$PATH"
 port -v selfupdate
 
 rm -rf /tmp/MacPorts-1.9.2
-rm /tmp/MacPorts-1.9.2.tar.bz2
