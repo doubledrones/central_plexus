@@ -17,7 +17,7 @@ fi
 if [ ! -d ~/Applications/ ]; then
   mkdir -p ~/Applications/
 fi
-open alfred_$VERSION.dmg
+hdiutil attach -noautoopen -noidme alfred_$VERSION.dmg
 sleep 1
 rsync -a /Volumes/Alfred.app/Alfred.app/ ~/Applications/Alfred.app/
 sleep 1

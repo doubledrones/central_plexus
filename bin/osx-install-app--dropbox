@@ -17,7 +17,7 @@ fi
 if [ ! -d ~/Applications/ ]; then
   mkdir -p ~/Applications/
 fi
-open Dropbox-$VERSION.dmg
+hdiutil attach -noautoopen -noidme Dropbox-$VERSION.dmg
 sleep 1
 rsync -a /Volumes/Dropbox\ Installer/Dropbox.app/ ~/Applications/Dropbox.app/
 sleep 1

@@ -17,7 +17,7 @@ fi
 if [ ! -d ~/Applications/ ]; then
   mkdir -p ~/Applications/
 fi
-open vlc-$VERSION-intel64.dmg
+hdiutil attach -noautoopen -noidme vlc-$VERSION-intel64.dmg
 sleep 1
 rsync -a /Volumes/vlc-1.1.5/VLC.app/ ~/Applications/VLC.app/
 sleep 1

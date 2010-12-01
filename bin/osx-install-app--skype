@@ -17,7 +17,7 @@ fi
 if [ ! -d ~/Applications/ ]; then
   mkdir -p ~/Applications/
 fi
-open Skype_$VERSION.dmg
+hdiutil attach -noautoopen -noidme Skype_$VERSION.dmg
 sleep 1
 rsync -a /Volumes/Skype/Skype.app/ ~/Applications/Skype.app/
 sleep 1
