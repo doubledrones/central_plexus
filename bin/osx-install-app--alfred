@@ -9,7 +9,7 @@ if [ ! -d ~/Library/Caches/central_plexus ]; then
 fi
 
 cd ~/Library/Caches/central_plexus
-if [ ! -f Skype_$VERSION.dmg.ok ]; then
+if [ ! -f alfred_$VERSION.dmg.ok ]; then
   curl http://media.alfredapp.com/alfred_$VERSION.dmg -o alfred_$VERSION.dmg
   hdiutil verify alfred_$VERSION.dmg
   touch alfred_$VERSION.dmg.ok
