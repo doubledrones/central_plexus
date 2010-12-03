@@ -1,5 +1,7 @@
 #!/bin/sh -ev
 
+APPLICAGE_VERSION="d9c21cb"
+
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
   RVM_INSTALL=$HOME/.gem/ruby/1.8/bin/rvm-install
   if [ ! -x $RVM_INSTALL ]; then
@@ -52,3 +54,15 @@ sleep 2
 
 # ACK setup
 ~/bin/ack-setup
+
+# AppliCage
+if [ ! -d ~/projects/AppliCage ]; then
+  cd ~/projects
+  curl http://download.github.com/doubledrones-AppliCage-$APPLICAGE_VERSION.tar.gz | tar xvfz -
+  mv doubledrones-AppliCage-$APPLICAGE_VERSION AppliCage
+  cd AppliCage
+  ./install.sh
+fi
+
+# Install caged postgresql84-server
+port install postgresql84-server +homedir
