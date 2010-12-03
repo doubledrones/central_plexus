@@ -14,7 +14,9 @@ source ~/.bash_profile
 rvm update --edge
 rvm reload
 
-cp ~/projects/central_plexus/.gitconfig ~/
+if [ ! -f ~/.gitconfig ]; then
+  cp ~/projects/central_plexus/.gitconfig ~/
+fi
 
 if [ ! -L ~/.gemrc ]; then
   ln -s ~/projects/central_plexus/.gemrc ~/
