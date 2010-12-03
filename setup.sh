@@ -47,6 +47,7 @@ fi
 
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
+sleep 2
 ~/bin/osx-menubar-enable-User
 
 # ACK setup
