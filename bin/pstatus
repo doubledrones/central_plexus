@@ -18,6 +18,14 @@ do
     esac
     cd ..
   fi
+  if [ -f $PROJECT/Gemfile ]; then
+    for REQUIRED_GEM in wirble hirb
+    do
+      if [ -z "`cat $PROJECT/Gemfile | grep $REQUIRED_GEM`" ]; then
+        echo "$PROJECT: \"$REQUIRED_GEM\" gem not included in Gemfile"
+      fi
+    done
+  fi
 done
 echo
 
