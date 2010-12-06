@@ -33,10 +33,10 @@ if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
   # Display the RAILS ENV in the prompt
   # ie : [Development]>>
   IRB.conf[:PROMPT][:CUSTOM] = {
-   :PROMPT_N => "[#{ENV["RAILS_ENV"].capitalize}]>> ",
-   :PROMPT_I => "[#{ENV["RAILS_ENV"].capitalize}]>> ",
+   :PROMPT_N => "\033[0;32m[#{ENV["RAILS_ENV"].capitalize}] \033[0;34m> \033[0;0m",
+   :PROMPT_I => "\033[0;32m[#{ENV["RAILS_ENV"].capitalize}] \033[0;34m> \033[0;0m",
    :PROMPT_S => nil,
-   :PROMPT_C => "?> ",
+   :PROMPT_C => "\033[0;34m?> \033[0;0m",
    :RETURN => "=> %s\n"
    }
   # Set default prompt
