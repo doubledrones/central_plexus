@@ -29,6 +29,8 @@ make install
 
 echo "-doc +no_x11 +no_java -ipv6" > $HOME/.macports/etc/macports/variants.conf
 
+echo "buildmakejobs `osx-makejobs`" > $HOME/.macports/macports.conf
+
 cd
 
 export PATH="~/.macports/bin:$PATH"
