@@ -2,6 +2,8 @@
 
 APPLICAGE_VERSION="d9c21cb"
 
+export GEM_HOME=$HOME/.gem
+
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
   RVM_INSTALL=$HOME/.gem/ruby/1.8/bin/rvm-install
   if [ ! -x $RVM_INSTALL ]; then
