@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+cd `dirname $0`
+
+expr `expr \`./osx-cpu-num\` \* 2` + 1

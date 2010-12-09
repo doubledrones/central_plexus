@@ -36,6 +36,10 @@ if [ ! -L ~/.vimrc ]; then
   ln -s ~/projects/central_plexus/.vimrc ~/
 fi
 
+if [ ! -L ~/.irbrc ]; then
+  ln -s ~/projects/central_plexus/.irbrc ~/
+fi
+
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
 ~/bin/osx-macvim-color-setup

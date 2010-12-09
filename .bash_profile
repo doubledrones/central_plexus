@@ -11,7 +11,7 @@ PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\
 export PATH="~/.macports/bin:~/.macports/sbin:$PATH"
 
 # Postgresql 8.4 for building gems and dependent packages
-export PATH="/opt/local/lib/postgresql84/bin:$PATH"
+export PATH="$HOME/.macports/lib/postgresql84/bin/:$PATH"
 
 # Home directory binaries and scripts
 export PATH="~/bin:$PATH"
@@ -40,6 +40,8 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+
+export RUBYOPT='rubygems'
 
 if [ -e ~/.bash_profile.local ]; then
   source ~/.bash_profile.local

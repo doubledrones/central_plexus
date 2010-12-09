@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$HOME/.macports/lib/postgresql84/bin/postgres -D $HOME/.macports/var/db/postgresql84/defaultdb
