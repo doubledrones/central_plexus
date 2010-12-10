@@ -1,0 +1,31 @@
+#!/bin/sh
+
+source ~/.bash_profile
+
+cd ~/projects
+
+for PROJECT in *
+do
+  echo
+  echo $PROJECT
+  if [ -f $PROJECT/.rvmrc ]; then
+    cd $PROJECT
+    RVM_RUBY=`cat .rvmrc | cut -f 2 -d ' ' | cut -f 1 -d \@`
+    RVM_GEMSET=`cat .rvmrc | cut -f 2 -d ' ' | cut -f 2 -d \@`
+    rvm install $RVM_RUBY
+    cd ..
+    cd $PROJECT
+    if [ ! -z "$RVM_GEMSET" ]; then
+      rvm gemset create "$RVM_GEMSET"
+    fi
+    cd ..
+  fi
+  if [ -f $PROJECT/Gemfile ]; then
+    cd $PROJECT
+    gem install bundler
+    bundle install
+    cd ..
+  fi
+done
+echo
+
