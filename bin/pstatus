@@ -1,30 +1,37 @@
 #!/bin/sh
 
+IGNORE_PROJECTS="$HOME/.central_plexus/pstatus.ignore_projects"
+IGNORE_GEMS_IN_PROJECTS="$HOME/.central_plexus/pstatus.ignore_gems_in_projects"
+
 cd ~/projects
 
 for PROJECT in *
 do
-  if [ -d $PROJECT/.git ]; then
-    cd $PROJECT
-    STATUS=`git st`
-    case $STATUS in
-      "## master")
-        ;;
-      *)
-        echo
-        echo $PROJECT
-        git st
-        ;;
-    esac
-    cd ..
-  fi
-  if [ -f $PROJECT/Gemfile ]; then
-    for REQUIRED_GEM in wirble hirb
-    do
-      if [ -z "`cat $PROJECT/Gemfile | grep $REQUIRED_GEM`" ]; then
-        echo "$PROJECT: \"$REQUIRED_GEM\" gem not included in Gemfile"
-      fi
-    done
+  if [ -z "`cat $IGNORE_PROJECTS | grep "^$PROJECT$"`" ]; then
+    if [ -d $PROJECT/.git ]; then
+      cd $PROJECT
+      STATUS=`git st`
+      case $STATUS in
+        "## master")
+          ;;
+        *)
+          echo
+          echo $PROJECT
+          git st
+          ;;
+      esac
+      cd ..
+    fi
+    if [ -f $PROJECT/Gemfile ]; then
+      for REQUIRED_GEM in wirble hirb
+      do
+        if [ -z "`cat $IGNORE_GEMS_IN_PROJECTS | grep "^$REQUIRED_GEM: $PROJECT$"`" ]; then
+          if [ -z "`cat $PROJECT/Gemfile | grep $REQUIRED_GEM`" ]; then
+            echo "$PROJECT: \"$REQUIRED_GEM\" gem not included in Gemfile"
+          fi
+        fi
+      done
+    fi
   fi
 done
 echo
