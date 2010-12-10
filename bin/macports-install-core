@@ -10,6 +10,8 @@ watch
 wget
 macvim
 tmux
+md5sha1sum
+p5-crypt-ripemd160
 "
 
 # TODO replate to for
