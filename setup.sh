@@ -13,7 +13,7 @@ if [ ! -x $HOME/.rvm/scripts/rvm ]; then
 fi
 
 if [ ! -L ~/.bash_profile ]; then
-  ln -s ~/projects/central_plexus/.bash_profile ~/
+  ln -s ~/projects/central_plexus/bash_profile ~/.bash_profile
 fi
 source ~/.bash_profile
 
@@ -21,11 +21,11 @@ rvm update --edge
 rvm reload
 
 if [ ! -f ~/.gitconfig ]; then
-  cp ~/projects/central_plexus/.gitconfig ~/
+  cp ~/projects/central_plexus/gitconfig ~/.gitconfig
 fi
 
 if [ ! -L ~/.gemrc ]; then
-  ln -s ~/projects/central_plexus/.gemrc ~/
+  ln -s ~/projects/central_plexus/gemrc ~/.gemrc
 fi
 
 if [ ! -e ~/bin ]; then
@@ -33,11 +33,11 @@ if [ ! -e ~/bin ]; then
 fi
 
 if [ ! -L ~/.vimrc ]; then
-  ln -s ~/projects/central_plexus/.vimrc ~/
+  ln -s ~/projects/central_plexus/vimrc ~/.vimrc
 fi
 
 if [ ! -L ~/.irbrc ]; then
-  ln -s ~/projects/central_plexus/.irbrc ~/
+  ln -s ~/projects/central_plexus/irbrc ~/.irbrc
 fi
 
 # Setup MacVim
