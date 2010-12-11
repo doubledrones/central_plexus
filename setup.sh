@@ -20,6 +20,9 @@ source ~/.bash_profile
 rvm update --edge
 rvm reload
 
+rvm install ree-1.8.6
+rvm ree-1.8.6 --default
+
 if [ ! -f ~/.gitconfig ]; then
   cp ~/projects/central_plexus/gitconfig ~/.gitconfig
 fi
