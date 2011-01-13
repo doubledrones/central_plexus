@@ -1,6 +1,6 @@
 #!/bin/sh -ev
 
-APPLICAGE_VERSION="d9c21cb"
+APPLICAGE_VERSION="9bebf52"
 
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
