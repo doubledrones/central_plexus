@@ -1,7 +1,5 @@
 #!/bin/sh -ev
 
-APPLICAGE_VERSION="9bebf52"
-
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
@@ -67,8 +65,8 @@ sleep 2
 # AppliCage
 if [ ! -d ~/projects/AppliCage ]; then
   cd ~/projects
-  curl http://download.github.com/doubledrones-AppliCage-$APPLICAGE_VERSION.tar.gz | tar xvfz -
-  mv doubledrones-AppliCage-$APPLICAGE_VERSION AppliCage
+  curl -L https://github.com/doubledrones/AppliCage/tarball/master | tar xvfz -
+  mv doubledrones-AppliCage-* AppliCage
   cd AppliCage
   ./install.sh
 fi
