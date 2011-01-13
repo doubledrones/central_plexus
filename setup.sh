@@ -5,7 +5,11 @@ APPLICAGE_VERSION="9bebf52"
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
-  bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-latest )
+  RVM_INSTALL=/tmp/rvm-install-latest-`date "+%Y%m%d%H%M%S"`
+  curl http://rvm.beginrescueend.com/releases/rvm-install-latest -o $RVM_INSTALL
+  chmod 700 $RVM_INSTALL
+  $RVM_INSTALL
+  rm -f $RVM_INSTALL
 fi
 
 if [ ! -L ~/.bash_profile ]; then
