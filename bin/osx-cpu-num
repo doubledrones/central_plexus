@@ -1,3 +1,0 @@
-#!/bin/sh -e
-
-ioreg | grep CPU.@ | wc -l | sed -e 's/ //g'
