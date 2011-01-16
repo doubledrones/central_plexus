@@ -85,7 +85,7 @@ source ~/.shell_aliases
 ~/bin/osx-dock-lock
 
 # Mac OS X dashboard
-~/bin/osx-dashboard-disable
+echo `~/bin/osx-dashboard-disable` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
