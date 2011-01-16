@@ -10,7 +10,10 @@ if [ ! -x $HOME/.rvm/scripts/rvm ]; then
   rm -f $RVM_INSTALL
 fi
 
-if [ ! -L ~/.bash_profile ]; then
+if [ -L ~/.bash_profile ]; then
+  rm ~/.bash_profile
+fi
+if [ ! -e ~/.bash_profile ]; then
   ln -s ~/projects/central_plexus/bash_profile ~/.bash_profile
 fi
 source ~/.bash_profile
@@ -25,7 +28,10 @@ if [ ! -f ~/.gitconfig ]; then
   cp ~/projects/central_plexus/gitconfig ~/.gitconfig
 fi
 
-if [ ! -L ~/.gemrc ]; then
+if [ -L ~/.gemrc ]; then
+  rm ~/.gemrc
+fi
+if [ ! -e ~/.gemrc ]; then
   ln -s ~/projects/central_plexus/gemrc ~/.gemrc
 fi
 
@@ -33,10 +39,16 @@ if [ ! -e ~/bin ]; then
   ln -s ~/projects/central_plexus/bin ~/
 fi
 
-if [ ! -L ~/.vimrc ]; then
+if [ -L ~/.vimrc ]; then
+  rm ~/.vimrc
+fi
+if [ ! -e ~/.vimrc ]; then
   ln -s ~/projects/central_plexus/vimrc ~/.vimrc
 fi
 
+if [ -L ~/.irbrc ]; then
+  rm ~/.irbrc
+fi
 if [ ! -L ~/.irbrc ]; then
   ln -s ~/projects/central_plexus/irbrc ~/.irbrc
 fi
