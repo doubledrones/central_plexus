@@ -1,7 +1,7 @@
 #!/bin/sh
 
 EMPTY_ICON=~/projects/central_plexus/resources/empty_menubar_icon.png
-if [ -d /Applications/Gitifier.app ]; then
-  cp -rvp $EMPTY_ICON /Applications/Gitifier.app/Contents/Resources/icon_menu.png
+if [ -d $HOME/Applications/Gitifier.app ]; then
+  cp -rvp $EMPTY_ICON $HOME/Applications/Gitifier.app/Contents/Resources/icon_menu.png
 fi
 

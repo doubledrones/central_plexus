@@ -1,7 +1,7 @@
 #!/bin/sh
 
 EMPTY_ICON=~/projects/central_plexus/resources/empty_menubar_icon.png
-if [ -d /Applications/CCMenu.app ]; then
-  cp -rvp $EMPTY_ICON /Applications/CCMenu.app/Contents/Resources/icon-success.png
+if [ -d $HOME/Applications/CCMenu.app ]; then
+  cp -rvp $EMPTY_ICON $HOME/Applications/CCMenu.app/Contents/Resources/icon-success.png
 fi
 

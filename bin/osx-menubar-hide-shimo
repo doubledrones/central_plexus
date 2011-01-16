@@ -1,7 +1,7 @@
 #!/bin/sh
 
 EMPTY_ICON=~/projects/central_plexus/resources/empty_menubar_icon.tif
-if [ -d /Applications/Shimo.app ]; then
-  cp -rvp $EMPTY_ICON /Applications/Shimo.app/Contents/Resources/shimo_menu_connected.tif
+if [ -d $HOME/Applications/Shimo.app ]; then
+  cp -rvp $EMPTY_ICON $HOME/Applications/Shimo.app/Contents/Resources/shimo_menu_connected.tif
 fi
 
