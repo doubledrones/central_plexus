@@ -1,3 +1,6 @@
 [submodule "dotmatrix"]
 	path = dotmatrix
 	url = git://github.com/doubledrones/dotmatrix.git
+[submodule "AppliCage"]
+	path = AppliCage
+	url = git://github.com/doubledrones/AppliCage.git

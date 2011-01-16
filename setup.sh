@@ -101,13 +101,9 @@ if [ ! -f $HOME/.central_plexus/pstatus.ignore_gems_in_projects ]; then
 fi
 
 # AppliCage
-if [ ! -d ~/projects/AppliCage ]; then
-  cd ~/projects
-  curl -L https://github.com/doubledrones/AppliCage/tarball/master | tar xvfz -
-  mv doubledrones-AppliCage-* AppliCage
-  cd AppliCage
-  ./install.sh
-fi
+cd AppliCage
+./install.sh
+
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
