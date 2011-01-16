@@ -78,6 +78,17 @@ sleep 2
 # ACK setup
 ~/bin/ack-setup
 
+# pstatus configuration
+if [ ! -d $HOME/.central_plexus/ ]; then
+  mkdir -p $HOME/.central_plexus/
+fi
+if [ ! -f $HOME/.central_plexus/pstatus.ignore_projects ]; then
+  touch $HOME/.central_plexus/pstatus.ignore_projects
+fi
+if [ ! -f $HOME/.central_plexus/pstatus.ignore_gems_in_projects ]; then
+  touch $HOME/.central_plexus/pstatus.ignore_gems_in_projects
+fi
+
 # AppliCage
 if [ ! -d ~/projects/AppliCage ]; then
   cd ~/projects
