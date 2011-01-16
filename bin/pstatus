@@ -23,7 +23,7 @@ do
       cd ..
     fi
     if [ -f $PROJECT/Gemfile ]; then
-      for REQUIRED_GEM in wirble hirb
+      for REQUIRED_GEM in wirble hirb awesome_print
       do
         if [ -z "`cat $IGNORE_GEMS_IN_PROJECTS | grep "^$REQUIRED_GEM: $PROJECT$"`" ]; then
           if [ -z "`cat $PROJECT/Gemfile | grep $REQUIRED_GEM`" ]; then
