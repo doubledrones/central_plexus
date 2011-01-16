@@ -1,0 +1,3 @@
+[submodule "dotmatrix"]
+	path = dotmatrix
+	url = git://github.com/doubledrones/dotmatrix.git
