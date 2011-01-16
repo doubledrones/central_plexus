@@ -97,7 +97,7 @@ cd AppliCage
 ./install.sh
 
 port selfupdate
-port upgrade outdated
+echo `port upgrade outdated` # run in sub-shell to ignore errors
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
