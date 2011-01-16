@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sudo launchctl unload -w /Library/LaunchDaemons/org.macports.postgresql84-server.plist 2> /dev/null
-

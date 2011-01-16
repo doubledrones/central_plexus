@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sudo launchctl load -w /Library/LaunchDaemons/org.macports.postgresql84-server.plist
-
