@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ ! -e ~/.ackrc ]; then
-  ln -s ~/projects/central_plexus/ackrc ~/.ackrc
-else
-  echo "~/.ackrc already exist"
-fi

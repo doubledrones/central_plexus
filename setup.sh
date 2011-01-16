@@ -57,6 +57,12 @@ if [ ! -L ~/.irbrc ]; then
   ln -s ~/projects/central_plexus/irbrc ~/.irbrc
 fi
 
+if [ ! -e ~/.ackrc ]; then
+  ln -s ~/projects/central_plexus/ackrc ~/.ackrc
+else
+  echo "~/.ackrc already exist"
+fi
+
 # setup dotmatrix
 rvm rvmrc trust dotmatrix
 cd dotmatrix
@@ -85,9 +91,6 @@ source ~/.shell_aliases
 ~/bin/osx-menubar-remove-all
 sleep 2
 ~/bin/osx-menubar-enable-User
-
-# ACK setup
-~/bin/ack-setup
 
 # pstatus configuration
 if [ ! -d $HOME/.central_plexus/ ]; then
