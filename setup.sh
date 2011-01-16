@@ -104,6 +104,31 @@ fi
 cd AppliCage
 ./install.sh
 
+port selfupdate
+port upgrade outdated
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
+
+PORTS="
+git-core
+htop
+p5-app-ack
+pbzip2
+lzmautils
+watch
+wget
+macvim
+tmux
+md5sha1sum
+p5-crypt-ripemd160
+links
+"
+
+echo "$PORTS" | while read line
+do
+  if [ -n "$line" ]
+  then
+    port install $line
+  fi
+done
