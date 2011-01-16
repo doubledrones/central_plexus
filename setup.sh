@@ -1,5 +1,7 @@
 #!/bin/sh -ev
 
+DEFAULT_RVM_RUBY="ree-1.8.6"
+
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
@@ -21,8 +23,10 @@ source ~/.bash_profile
 rvm update --edge
 rvm reload
 
-rvm install ree-1.8.6
-rvm ree-1.8.6 --default
+if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
+  rvm install $DEFAULT_RVM_RUBY
+fi
+rvm $DEFAULT_RVM_RUBY --default
 
 if [ ! -f ~/.gitconfig ]; then
   cp ~/projects/central_plexus/gitconfig ~/.gitconfig
