@@ -57,6 +57,14 @@ if [ ! -L ~/.irbrc ]; then
   ln -s ~/projects/central_plexus/irbrc ~/.irbrc
 fi
 
+# setup dotmatrix
+rvm rvmrc trust dotmatrix
+cd dotmatrix
+gem install bundler
+bundle install
+rake setup
+cd ..
+
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
 ~/bin/osx-macvim-color-setup
