@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -z "`git st | grep -v "## master"`" ]; then
-  exit 0
-else
-  exit 1
-fi

@@ -6,7 +6,7 @@ for PROJECT in *
 do
   if [ -d $PROJECT/.git ]; then
     cd $PROJECT
-    if `git-clean`; then
+    if `git_clean`; then
       echo
       echo "$PROJECT"
       git pull
