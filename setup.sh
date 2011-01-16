@@ -101,6 +101,7 @@ port upgrade outdated
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
+postgres_local_create_directory
 
 PORTS="
 git-core
