@@ -60,7 +60,9 @@ fi
 # setup dotmatrix
 rvm rvmrc trust dotmatrix
 cd dotmatrix
-gem install bundler
+if [ -z "`which bundle 2>/dev/null`" ]; then
+  gem install bundler
+fi
 bundle install
 rake setup
 cd ..
