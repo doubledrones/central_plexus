@@ -66,6 +66,7 @@ fi
 bundle install
 rake setup
 cd ..
+source ~/.shell_aliases
 
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
