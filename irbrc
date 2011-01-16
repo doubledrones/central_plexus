@@ -9,6 +9,14 @@ begin
 rescue LoadError
 end
 
+# Awesome Print
+# https://github.com/michaeldv/awesome_print
+begin
+  require "ap"
+  ap object, options = {}
+rescue LoadError
+end
+
 if Object.const_defined?('Wirble')
   Wirble.init
   Wirble.colorize
