@@ -84,6 +84,7 @@ source ~/.shell_aliases
 ~/bin/osx-dock-autohide-enable
 ~/bin/osx-dock-glass-disable
 ~/bin/osx-dock-lock
+~/bin/osx-dock-restart
 
 # Mac OS X dashboard
 echo `~/bin/osx-dashboard-disable` # run in sub-shell to ignore errors

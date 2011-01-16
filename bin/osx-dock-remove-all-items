@@ -2,6 +2,3 @@
 
 defaults delete com.apple.dock persistent-apps
 defaults delete com.apple.dock persistent-others
-
-killall Dock
-
