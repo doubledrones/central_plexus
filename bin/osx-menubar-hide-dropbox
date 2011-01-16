@@ -1,10 +1,10 @@
 #!/bin/sh
 
 EMPTY_ICON=~/projects/central_plexus/resources/empty_menubar_icon.png
-if [ -d /Applications/Dropbox.app ]; then
+if [ -d $HOME/Applications/Dropbox.app ]; then
   for ICON in idle-lep.png busy-lep.png busy2-lep.png busy3-lep.png busy4-lep.png
   do
-    cp -rvp $EMPTY_ICON /Applications/Dropbox.app/Contents/Resources/$ICON
+    cp -rvp $EMPTY_ICON $HOME/Applications/Dropbox.app/Contents/Resources/dropboxstatus-$ICON
   done
 fi
 
