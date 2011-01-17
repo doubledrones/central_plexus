@@ -118,6 +118,7 @@ tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
+iTerm
 "
 
 echo "$PORTS" | while read line
