@@ -5,6 +5,7 @@
 	br = branch
 	di = diff
 	diw = "diff --word-diff"
+	upstream = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
 [color]
 	branch = auto
 	diff = auto
