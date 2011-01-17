@@ -1,1 +1,13 @@
 Central plexus is a toolset for our Macs.
+
+Usage:
+
+1) create new account (central_plexus will make minimalist desktop, so you if you not want to change current setup do so)
+
+2) run Terminal on newly created account (fastest via CMD+SPACE of Spotlight)
+
+3) run following command on Terminal:
+
+# bash < <(curl http://doubledrones.com/cp.sh)
+
+4) enjoy, improve, make pull requests :)
