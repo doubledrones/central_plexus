@@ -94,8 +94,8 @@ echo `~/bin/osx-dashboard-disable` # run in sub-shell to ignore errors
 sleep 2
 ~/bin/osx-menubar-enable-User
 
-# AppliCage
-cd AppliCage
+# applicage
+cd applicage
 ./install.sh
 
 port selfupdate
