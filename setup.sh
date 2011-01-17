@@ -67,7 +67,7 @@ fi
 rvm rvmrc trust dotmatrix
 rvm gemset create 'dotmatrix'
 cd dotmatrix
-if [ -z "`which bundle 2>/dev/null`" ]; then
+if [ -z "`which bundle 2>/dev/null | grep -v '/usr/bin/bundle'`" ]; then
   gem install bundler
 fi
 bundle install
