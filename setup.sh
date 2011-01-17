@@ -80,7 +80,7 @@ source ~/.shell_aliases
 ~/bin/osx-macvim-color-setup
 
 # Mac OS X Dock setup
-~/bin/osx-dock-remove-all-items
+echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 ~/bin/osx-dock-autohide-enable
 ~/bin/osx-dock-glass-disable
 ~/bin/osx-dock-lock
