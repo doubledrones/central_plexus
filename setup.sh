@@ -119,6 +119,7 @@ md5sha1sum
 p5-crypt-ripemd160
 links
 iTerm
+Things
 "
 
 echo "$PORTS" | while read line
