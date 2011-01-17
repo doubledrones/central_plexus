@@ -10,6 +10,10 @@ set expandtab
 " Disable compatibility with VI - gives all VIM capabilities
 set nocompatible
 
+" Vim tmp directories
+set backupdir=~/.vim/tmp/
+set directory=~/.vim/tmp/
+
 " Show ruler - line, column and percentage location of cursor
 set ruler
 

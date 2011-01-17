@@ -75,6 +75,11 @@ rake setup
 cd ..
 source ~/.shell_aliases
 
+# Vim tmp directory
+if [ ! -d ~/.vim/tmp ]; then
+  mkdir -p ~/.vim/tmp
+fi
+
 # Setup MacVim
 ~/bin/osx-macvim-bundle-setup
 ~/bin/osx-macvim-color-setup
