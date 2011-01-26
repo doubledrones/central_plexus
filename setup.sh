@@ -28,6 +28,28 @@ if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
 fi
 rvm $DEFAULT_RVM_RUBY --default
 
+for MY_RUBY_VERSION in ree-1.8.6:20090610 ruby-1.8.7:p330 ruby-1.9.2:p136
+do
+  MY_RUBY_PATCH=`echo $MY_RUBY_VERSION | cut -f 2 -d :`
+  MY_RUBY_VERSION=`echo $MY_RUBY_VERSION | cut -f 1 -d :`
+  if [ ! -d ~/.rvm/rubies/$MY_RUBY_VERSION-$MY_RUBY_PATCH/ ]; then
+    if [ -d ~/.rvm/rubies/$MY_RUBY_VERSION-*/ ]; then
+      rvm uninstall $MY_RUBY_VERSION
+    fi
+    case $MY_RUBY_VERSION in
+      "ruby-1.9.2")
+        rvm use ruby-1.8.7
+        ;;
+    esac
+    rvm install $MY_RUBY_VERSION
+    case $MY_RUBY_VERSION in
+      "ruby-1.9.2")
+        rvm use default
+        ;;
+    esac
+  fi
+done
+
 if [ ! -f ~/.gitconfig ]; then
   cp ~/projects/central_plexus/gitconfig ~/.gitconfig
 fi
