@@ -133,6 +133,13 @@ port install postgresql84-server +homedir
 postgres_local_create_directory
 
 PORTS="
+pkgconfig
+autoconf
+automake
+libtool
+libiconv
+openssh
+
 git-core
 htop
 p5-app-ack
@@ -156,3 +163,6 @@ do
     port install $line
   fi
 done
+
+sudo $HOME/.macports/bin/port install macfuse
+port install sshfs
