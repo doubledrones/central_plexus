@@ -164,5 +164,5 @@ do
   fi
 done
 
-sudo $HOME/.macports/bin/port install macfuse
+sudo $HOME/.macports/bin/port install macfuse Growl
 port install sshfs
