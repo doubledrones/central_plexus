@@ -113,9 +113,6 @@ echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 ~/bin/osx-dock-lock
 ~/bin/osx-dock-restart
 
-# Mac OS X dashboard
-echo `~/bin/osx-dashboard-disable` # run in sub-shell to ignore errors
-
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
 sleep 2
