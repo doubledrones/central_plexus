@@ -1,6 +1,6 @@
 #!/bin/sh -ev
 
-DEFAULT_RVM_RUBY="ree-1.8.6"
+DEFAULT_RVM_RUBY="ree-1.8.7"
 
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
@@ -28,7 +28,7 @@ if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
 fi
 rvm $DEFAULT_RVM_RUBY --default
 
-for MY_RUBY_VERSION in ree-1.8.6:20090610 ruby-1.8.7:p330 ruby-1.9.2:p136
+for MY_RUBY_VERSION in ree-1.8.7-2010.02 ree-1.8.6:20090610 ruby-1.8.7:p330 ruby-1.9.2:p136
 do
   MY_RUBY_PATCH=`echo $MY_RUBY_VERSION | cut -f 2 -d :`
   MY_RUBY_VERSION=`echo $MY_RUBY_VERSION | cut -f 1 -d :`
