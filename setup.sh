@@ -150,6 +150,8 @@ p5-crypt-ripemd160
 links
 iTerm
 Things
+aesutil
+aescrypt
 "
 
 echo "$PORTS" | while read line
