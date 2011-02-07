@@ -127,7 +127,6 @@ echo `port upgrade outdated` # run in sub-shell to ignore errors
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
-postgres_local_create_directory
 
 PORTS="
 pkgconfig
@@ -163,3 +162,5 @@ done
 
 sudo $HOME/.macports/bin/port install macfuse Growl
 port install sshfs
+
+postgres_local_create_directory
