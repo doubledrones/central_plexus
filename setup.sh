@@ -143,13 +143,15 @@ pbzip2
 lzmautils
 watch
 wget
-macvim
+macvim +ruby
 tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
 iTerm
 Things
+aesutil
+aescrypt
 "
 
 echo "$PORTS" | while read line
