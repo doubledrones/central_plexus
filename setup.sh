@@ -20,7 +20,7 @@ if [ ! -e ~/.bash_profile ]; then
 fi
 source ~/.bash_profile
 
-rvm update --edge
+rvm update
 rvm reload
 
 if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
