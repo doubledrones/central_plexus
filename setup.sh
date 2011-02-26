@@ -35,7 +35,7 @@ do
     if [ -d ~/.rvm/rubies/$MY_RUBY_VERSION-*/ ]; then
       rvm uninstall $MY_RUBY_VERSION
     fi
-    rvm install $MY_RUBY_VERSION
+    rvm install $MY_RUBY_VERSION -C --enable-pthread
   fi
 done
 
