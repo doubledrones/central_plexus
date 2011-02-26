@@ -97,6 +97,13 @@ rake setup
 cd ..
 source ~/.shell_aliases
 
+# applicage
+cd applicage
+./install.sh
+port selfupdate
+echo `port upgrade outdated` # run in sub-shell to ignore errors
+port install git-core
+
 # Vim tmp directory
 if [ ! -d ~/.vim/tmp ]; then
   mkdir -p ~/.vim/tmp
@@ -118,13 +125,6 @@ echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 sleep 2
 ~/bin/osx-menubar-enable-User
 
-# applicage
-cd applicage
-./install.sh
-
-port selfupdate
-echo `port upgrade outdated` # run in sub-shell to ignore errors
-
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
 
@@ -136,7 +136,6 @@ libtool
 libiconv
 openssh
 
-git-core
 htop
 p5-app-ack
 pbzip2
