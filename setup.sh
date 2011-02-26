@@ -20,7 +20,6 @@ if [ ! -e ~/.bash_profile ]; then
 fi
 source ~/.bash_profile
 
-rvm get head
 rvm reload
 
 if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
