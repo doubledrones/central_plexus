@@ -140,6 +140,7 @@ iTerm
 Things
 aesutil
 aescrypt
+weex
 "
 
 echo "$PORTS" | while read line
