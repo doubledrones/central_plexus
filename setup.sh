@@ -26,6 +26,7 @@ if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
   rvm install $DEFAULT_RVM_RUBY
 fi
 rvm $DEFAULT_RVM_RUBY --default
+gem install flog
 
 for MY_RUBY_VERSION in ree-1.8.6:20090610 ruby-1.8.7:p334 ruby-1.9.2:p180
 do
