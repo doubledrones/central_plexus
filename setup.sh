@@ -142,6 +142,7 @@ Things
 aesutil
 aescrypt
 weex
+pwgen
 "
 
 echo "$PORTS" | while read line
