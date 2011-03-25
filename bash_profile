@@ -43,6 +43,8 @@ export RUBY_HEAP_FREE_MIN=500000
 
 export RUBYOPT='rubygems'
 
+source ~/.shell_aliases
+
 if [ -e ~/.bash_profile.local ]; then
   source ~/.bash_profile.local
 fi
