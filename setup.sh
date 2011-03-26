@@ -141,6 +141,7 @@ iTerm
 Things
 NetworkLocation
 KeyboardMaestro
+Caffeine
 aesutil
 aescrypt
 weex
