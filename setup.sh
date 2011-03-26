@@ -156,7 +156,11 @@ do
   fi
 done
 
-sudo $HOME/.macports/bin/port install -f macfuse Growl
-port install sshfs
+case $1 in
+  --sudo)
+    sudo $HOME/.macports/bin/port install -f macfuse Growl
+    port install sshfs
+    ;;
+esac
 
 postgres_local_create_directory
