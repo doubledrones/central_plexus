@@ -140,6 +140,7 @@ links
 iTerm
 Alfred
 Things
+Evernote
 Dropbox
 NetworkLocation
 KeyboardMaestro
