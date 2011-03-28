@@ -138,6 +138,7 @@ md5sha1sum
 p5-crypt-ripemd160
 links
 iTerm
+Alfred
 Things
 Dropbox
 NetworkLocation
@@ -156,6 +157,8 @@ do
     port install $line
   fi
 done
+
+open ~/Applications/MacPorts/Alfred.app/
 
 case $1 in
   --sudo)
