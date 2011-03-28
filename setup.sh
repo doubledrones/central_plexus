@@ -139,6 +139,7 @@ p5-crypt-ripemd160
 links
 iTerm
 Things
+Dropbox
 NetworkLocation
 KeyboardMaestro
 Caffeine
