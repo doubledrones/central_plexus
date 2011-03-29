@@ -145,6 +145,7 @@ Dropbox
 NetworkLocation
 KeyboardMaestro
 Caffeine
+1Password
 aesutil
 aescrypt
 weex
