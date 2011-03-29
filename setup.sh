@@ -162,6 +162,10 @@ done
 
 open ~/Applications/MacPorts/Alfred.app/
 
+# cleanup distfiles
+rm -rf ~/.macports/var/macports/distfiles/
+mkdir -p ~/.macports/var/macports/distfiles/
+
 case $1 in
   --sudo)
     sudo $HOME/.macports/bin/port install -f macfuse Growl
