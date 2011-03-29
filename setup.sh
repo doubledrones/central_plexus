@@ -150,6 +150,7 @@ aesutil
 aescrypt
 weex
 pwgen
+MindNode
 "
 
 echo "$PORTS" | while read line
