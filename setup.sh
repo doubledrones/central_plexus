@@ -28,7 +28,7 @@ fi
 rvm $DEFAULT_RVM_RUBY --default
 gem install flog
 
-for MY_RUBY_VERSION in ree-1.8.6:p399 ruby-1.8.7:p334 ruby-1.9.2:p180
+for MY_RUBY_VERSION in ruby-1.8.7:p334 ruby-1.9.2:p180
 do
   MY_RUBY_PATCH=`echo $MY_RUBY_VERSION | cut -f 2 -d :`
   MY_RUBY_VERSION=`echo $MY_RUBY_VERSION | cut -f 1 -d :`
