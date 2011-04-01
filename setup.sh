@@ -150,6 +150,7 @@ aesutil
 aescrypt
 weex
 pwgen
+TextMate
 MindNode
 "
 
