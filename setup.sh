@@ -168,6 +168,7 @@ open ~/Applications/MacPorts/Alfred.app/
 rm -rf ~/.macports/var/macports/distfiles/
 mkdir -p ~/.macports/var/macports/distfiles/
 
+# use it only when working on one account
 case $1 in
   --sudo)
     sudo $HOME/.macports/bin/port install -f macfuse Growl
