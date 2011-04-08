@@ -152,6 +152,7 @@ weex
 pwgen
 TextMate
 MindNode
+Fluid
 "
 
 echo "$PORTS" | while read line
