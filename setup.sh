@@ -150,6 +150,7 @@ aesutil
 aescrypt
 weex
 pwgen
+unrar
 TextMate
 MindNode
 Fluid
