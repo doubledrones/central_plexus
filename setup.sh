@@ -154,6 +154,7 @@ unrar
 TextMate
 MindNode
 Fluid
+ncftp
 "
 
 echo "$PORTS" | while read line
