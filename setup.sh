@@ -155,6 +155,7 @@ TextMate
 MindNode
 Fluid
 ncftp
+firefox-bin-pl
 "
 
 echo "$PORTS" | while read line
