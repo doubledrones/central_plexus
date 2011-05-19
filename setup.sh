@@ -155,6 +155,7 @@ TextMate
 MindNode
 Fluid
 ncftp
+xz
 firefox-bin-pl
 "
 
