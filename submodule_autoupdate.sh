@@ -2,6 +2,7 @@
 
 cd `dirname $0`
 
+git pull
 cd applicage
 git pull
 cd ../dotmatrix
