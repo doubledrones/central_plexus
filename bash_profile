@@ -9,6 +9,7 @@ PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\
 
 # MacPorts
 export PATH="~/.macports/bin:~/.macports/sbin:$PATH"
+export MANPATH="/Users/`whoami`/.macports/share/man:$MANPATH"
 
 # Postgresql 8.4 for building gems and dependent packages
 export PATH="$HOME/.macports/lib/postgresql84/bin/:$PATH"
