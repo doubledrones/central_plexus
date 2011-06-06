@@ -76,13 +76,7 @@ else
 fi
 
 # setup dotmatrix
-rvm rvmrc trust dotmatrix
-rvm gemset create 'dotmatrix'
 cd dotmatrix
-if [ -z "`which bundle 2>/dev/null | grep -v '/usr/bin/bundle'`" ]; then
-  gem install bundler
-fi
-bundle install
 rake setup
 cd ..
 source ~/.shell_aliases
