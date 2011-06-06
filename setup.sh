@@ -102,7 +102,7 @@ echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 ~/bin/osx-dock-autohide-enable
 ~/bin/osx-dock-glass-disable
 ~/bin/osx-dock-lock
-~/bin/osx-dock-restart
+echo `~/bin/osx-dock-restart` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
 ~/bin/osx-menubar-remove-all
