@@ -161,7 +161,7 @@ do
   fi
 done
 
-open ~/Applications/MacPorts/Alfred.app/
+echo `open ~/Applications/MacPorts/Alfred.app/` # run in sub-shell to ignore errors
 
 # cleanup distfiles
 rm -rf ~/.macports/var/macports/distfiles/
