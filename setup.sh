@@ -105,7 +105,7 @@ echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 echo `~/bin/osx-dock-restart` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
-~/bin/osx-menubar-remove-all
+echo `~/bin/osx-menubar-remove-all` # run in sub-shell to ignore errors
 sleep 2
 ~/bin/osx-menubar-enable-User
 
