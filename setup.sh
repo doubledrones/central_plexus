@@ -107,7 +107,7 @@ echo `~/bin/osx-dock-restart` # run in sub-shell to ignore errors
 # Mac OS X menubar setup
 echo `~/bin/osx-menubar-remove-all` # run in sub-shell to ignore errors
 sleep 2
-~/bin/osx-menubar-enable-User
+echo `~/bin/osx-menubar-enable-User` # run in sub-shell to ignore errors
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
