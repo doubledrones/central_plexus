@@ -1,5 +1,7 @@
 #!/bin/sh -ev
 
+D_R=`cd \`dirname $0\` ; pwd -P`
+
 DEFAULT_RVM_RUBY="ruby-1.9.2"
 
 export GEM_HOME="$HOME/.gem/ruby/1.8"
@@ -94,20 +96,20 @@ if [ ! -d ~/.vim/tmp ]; then
 fi
 
 # Setup MacVim
-~/bin/osx-macvim-bundle-setup
-~/bin/osx-macvim-color-setup
+$D_R/bin/osx-macvim-bundle-setup
+$D_R/bin/osx-macvim-color-setup
 
 # Mac OS X Dock setup
-echo `~/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
-~/bin/osx-dock-autohide-enable
-~/bin/osx-dock-glass-disable
-~/bin/osx-dock-lock
-echo `~/bin/osx-dock-restart` # run in sub-shell to ignore errors
+echo `$D_R/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
+$D_R/bin/osx-dock-autohide-enable
+$D_R/bin/osx-dock-glass-disable
+$D_R/bin/osx-dock-lock
+echo `$D_R/bin/osx-dock-restart` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
-echo `~/bin/osx-menubar-remove-all` # run in sub-shell to ignore errors
+echo `$D_R/bin/osx-menubar-remove-all` # run in sub-shell to ignore errors
 sleep 2
-echo `~/bin/osx-menubar-enable-User` # run in sub-shell to ignore errors
+echo `$D_R/bin/osx-menubar-enable-User` # run in sub-shell to ignore errors
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
