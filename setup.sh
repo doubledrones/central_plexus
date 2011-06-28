@@ -122,6 +122,7 @@ libtool
 libiconv
 openssh
 
+mtr
 htop
 p5-app-ack
 pbzip2
