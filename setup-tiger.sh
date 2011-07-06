@@ -25,3 +25,14 @@ if [ ! -x $HOME/.rvm/scripts/rvm ]; then
   mv scripts/install.tiger scripts/install
   ./scripts/install --prefix "$HOME" --path "$HOME/.rvm"
 fi
+
+export MACOSX_DEPLOYMENT_TARGET="10.4"
+
+source ~/.rvm/scripts/rvm
+
+if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
+  rvm install $DEFAULT_RVM_RUBY
+fi
+rvm $DEFAULT_RVM_RUBY --default
+
+rvm reload
