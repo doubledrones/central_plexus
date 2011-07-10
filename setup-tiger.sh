@@ -36,3 +36,5 @@ fi
 rvm $DEFAULT_RVM_RUBY --default
 
 rvm reload
+
+gem install flog
