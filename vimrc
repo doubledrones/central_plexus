@@ -147,3 +147,6 @@ endfunction
 
 " Enable live flog (http://blog.10to1.be/ruby/2011/02/13/vim-flog-plugin/)
 :silent exe "g:flog_enable"
+
+" Disable bell
+set vb
