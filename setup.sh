@@ -134,7 +134,7 @@ tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
-iTerm
+iTerm2
 Alfred
 Things
 Evernote
