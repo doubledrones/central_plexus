@@ -39,5 +39,6 @@ rvm reload
 
 gem install flog
 
+port install iTermTiger
 port install p5-app-ack
 port install MacVimTiger
