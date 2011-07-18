@@ -120,6 +120,9 @@ $D_R/bin/osx-magic-mouse-two-button-enable
 # Disable annoying Front Row keystroke
 $D_R/bin/osx-frontrow-disable
 
+# Lock screen on sleep and screen saver
+$D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
+
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
 
