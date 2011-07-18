@@ -117,6 +117,9 @@ $D_R/bin/osx-capslock-disable
 # Magic Mouse setup
 $D_R/bin/osx-magic-mouse-two-button-enable
 
+# Disable annoying Front Row keystroke
+$D_R/bin/osx-frontrow-disable
+
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
 

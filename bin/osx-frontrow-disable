@@ -1,0 +1,40 @@
+#!/bin/sh
+
+
+exec osascript <<EOF
+
+tell application "System Preferences"
+  set current pane to pane id "com.apple.preference.keyboard"
+  tell current pane to reveal anchor "shortcutsTab"
+
+  activate
+end tell
+
+tell application "System Events"
+  tell application process "System Preferences"
+    tell window 1
+      tell tab group 1
+        tell scroll area 1
+          tell table 1
+            tell row 4
+              select
+            end tell
+          end tell
+        end tell
+        tell scroll area 2
+          tell outline 1
+            tell row 1
+              if (value of checkbox 1 is 1) then
+                click checkbox 1
+              end if
+            end tell
+          end tell
+        end tell
+      end tell
+    end tell
+  end tell
+end tell
+
+tell application "System Preferences" to quit
+
+EOF
