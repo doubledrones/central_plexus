@@ -1,7 +1,8 @@
 #!/bin/sh
 
-
-exec osascript <<EOF
+case "`osx-system-language`" in
+  "en")
+    exec osascript <<EOF
 
 tell application "System Preferences"
   set current pane to pane id "com.apple.preference.security"
@@ -22,6 +23,38 @@ tell application "System Events"
   end tell
 end tell
 
-#tell application "System Preferences" to quit
+tell application "System Preferences" to quit
 
 EOF
+    ;;
+  "pl")
+    exec osascript <<EOF
+
+tell application "System Preferences"
+  set current pane to pane id "com.apple.preference.security"
+  tell current pane to reveal anchor "general"
+
+  activate
+end tell
+
+tell application "System Events"
+  tell application process "System Preferences"
+    tell window 1
+      tell tab group 1
+        if (value of checkbox "Wymagaj hasła" is 0) then
+          click checkbox "Wymagaj hasła"
+        end if
+      end tell
+    end tell
+  end tell
+end tell
+
+tell application "System Preferences" to quit
+
+EOF
+    ;;
+  *)
+    echo "Unknown language"
+    exit 1
+    ;;
+esac
