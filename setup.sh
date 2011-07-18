@@ -114,6 +114,9 @@ echo `$D_R/bin/osx-menubar-enable-User` # run in sub-shell to ignore errors
 # Mac OS X disable annoying Caps Lock
 $D_R/bin/osx-capslock-disable
 
+# Magic Mouse setup
+$D_R/bin/osx-magic-mouse-two-button-enable
+
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
 
