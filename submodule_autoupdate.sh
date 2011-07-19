@@ -4,8 +4,10 @@ cd `dirname $0`
 
 git pull
 cd applicage
+git checkout master
 git pull
 cd ../dotmatrix
+git checkout master
 git pull
 cd ..
 
