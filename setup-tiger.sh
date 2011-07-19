@@ -40,5 +40,6 @@ rvm reload
 gem install flog
 
 port install iTermTiger
+port install 1Password2
 port install p5-app-ack
 port install MacVimTiger
