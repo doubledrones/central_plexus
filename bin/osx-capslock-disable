@@ -2,11 +2,11 @@
 
 set language to do shell script "osx-system-language"
 
-if (value of language is "en") then
+if (language is "en") then
   set modifier_keys to "Modifier Keys…"
   set window_name to "Keyboard"
   set no_action to "No Action"
-else if (value of language is "pl") then
+else if (language is "pl") then
   set modifier_keys to "Klawisze modyfikujące…"
   set window_name to "Klawiatura"
   set no_action to "Brak czynności"
