@@ -1,3 +1,10 @@
 #!/bin/sh -e
 
-defaults read .GlobalPreferences AppleLanguages | grep -v "^(" | head -n1 | sed 's/[ ,]//g'
+case `osx-version-minor` in
+  "10.4")
+    defaults read 'Apple Global Domain' 'AppleLanguages' | cut -f 2 -d \( | cut -f 1 -d ,
+    ;;
+  *)
+    defaults read .GlobalPreferences AppleLanguages | grep -v "^(" | head -n1 | sed 's/[ ,]//g'
+    ;;
+esac
