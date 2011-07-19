@@ -1,35 +1,16 @@
-#!/bin/sh -e
+#!/usr/bin/env osascript
 
-case "`osx-system-language`" in
-  "en")
-    exec osascript <<EOF
+set language to do shell script "osx-system-language"
 
-tell application "System Preferences"
-activate
-set current pane to pane "com.apple.preference.keyboard"
-end tell
-
-tell application "System Events"
-tell application process "System Preferences"
-get properties
-
-click button "Modifier Keys…" of tab group 1 of window "Keyboard"
-tell sheet 1 of window "Keyboard"
-click pop up button 4
-click menu item "No Action" of menu 1 of pop up button 4
-delay 3
-
-click button "OK"
-end tell
-end tell
-end tell
-
-tell application "System Preferences" to quit
-
-EOF
-    ;;
-  "pl")
-    exec osascript <<EOF
+if (value of language is "en") then
+  set modifier_keys to "Modifier Keys…"
+  set window_name to "Keyboard"
+  set no_action to "No Action"
+else if (value of language is "pl") then
+  set modifier_keys to "Klawisze modyfikujące…"
+  set window_name to "Klawiatura"
+  set no_action to "Brak czynności"
+end if
 
 tell application "System Preferences"
 activate
@@ -40,10 +21,10 @@ tell application "System Events"
 tell application process "System Preferences"
 get properties
 
-click button "Klawisze modyfikujące…" of tab group 1 of window "Klawiatura"
-tell sheet 1 of window "Klawiatura"
+click button modifier_keys of tab group 1 of window "Keyboard"
+tell sheet 1 of window window_name
 click pop up button 4
-click menu item "Brak czynności" of menu 1 of pop up button 4
+click menu item no_action of menu 1 of pop up button 4
 delay 3
 
 click button "OK"
@@ -52,11 +33,3 @@ end tell
 end tell
 
 tell application "System Preferences" to quit
-
-EOF
-    ;;
-  *)
-    echo "Unknown language"
-    exit 1
-    ;;
-esac
