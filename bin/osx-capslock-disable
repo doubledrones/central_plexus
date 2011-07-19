@@ -15,6 +15,7 @@ end if
 tell application "System Preferences"
 activate
 set current pane to pane "com.apple.preference.keyboard"
+tell current pane to reveal anchor "keyboardTab"
 end tell
 
 tell application "System Events"
