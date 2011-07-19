@@ -10,6 +10,8 @@ else if (language is "pl") then
   set modifier_keys to "Klawisze modyfikujące…"
   set window_name to "Klawiatura"
   set no_action to "Brak czynności"
+else
+  error "Unsupported language"
 end if
 
 tell application "System Preferences"
