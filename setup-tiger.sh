@@ -46,3 +46,4 @@ port install MacVimTiger
 port install md5sha1sum
 port install p5-crypt-ripemd160
 port install sshfsTiger
+port install CaffeineTiger
