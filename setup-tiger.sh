@@ -48,4 +48,4 @@ port install p5-crypt-ripemd160
 port install sshfsTiger
 port install CaffeineTiger
 port install Shimo
-port install Things
+port install ThingsTiger
