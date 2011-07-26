@@ -86,7 +86,7 @@ source ~/.shell_aliases
 # applicage
 cd applicage
 ./install.sh
-port selfupdate
+#port selfupdate
 echo `port upgrade outdated` # run in sub-shell to ignore errors
 port install git-core
 
