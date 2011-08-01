@@ -7,20 +7,31 @@ DEFAULT_RVM_RUBY="ruby-1.9.2"
 
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
+RVM_VERSION="1.6.32"
+
 if [ ! -x $HOME/.rvm/scripts/rvm ]; then
-  RVM_INSTALL=/tmp/rvm-install-`date "+%Y%m%d%H%M%S"`
-  curl https://rvm.beginrescueend.com/install/rvm -k | \
-    sed -e '6s/^/#/g' | \
-    sed -e '166,170s/^/#/g' | \
-    cat > $RVM_INSTALL
-  chmod 700 $RVM_INSTALL
-  $RVM_INSTALL --version latest
-  rm -f $RVM_INSTALL
-  cd $HOME/.rvm/src
-  cd `ls`
+  RVM_DOWNLOAD_URL="https://rvm.beginrescueend.com/releases"
+
+  curl -B -L -k $RVM_DOWNLOAD_URL/rvm-${RVM_VERSION}.tar.gz.md5 -o /tmp/rvm-${RVM_VERSION}.tar.gz.md5
+  curl -B -L -k $RVM_DOWNLOAD_URL/rvm-${RVM_VERSION}.tar.gz -o /tmp/rvm-${RVM_VERSION}.tar.gz
+  cd /tmp
+  md5 /tmp/rvm-${RVM_VERSION}.tar.gz
+  if [ $? -gt 0 ]; then
+    echo "Problem with source download"
+    exit 1
+  fi
+  if [ ! -d $HOME/.rvm/src ]; then
+    mkdir -p $HOME/.rvm/src
+  fi
+  tar xfz rvm-${RVM_VERSION}.tar.gz -C $HOME/.rvm/src
+  mv $HOME/.rvm/src/rvm-${RVM_VERSION} $HOME/.rvm/src/rvm
+  rm /tmp/rvm-${RVM_VERSION}.tar.gz.md5
+  rm /tmp/rvm-${RVM_VERSION}.tar.gz
+  cd $HOME/.rvm/src/rvm
   cp scripts/install scripts/install.tiger
   cat scripts/install | \
-    sed -e '6,13s/^/#/g' | \
+    sed -e '6s/^/#/g' | \
+    sed -e '9,14s/^/#/g' | \
     cat > scripts/install.tiger
   mv scripts/install.tiger scripts/install
   ./scripts/install --prefix "$HOME" --path "$HOME/.rvm"
