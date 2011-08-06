@@ -40,6 +40,8 @@ if [ -e ~/.shell_aliases ]; then
   source ~/.shell_aliases
 fi
 
+ARCHFLAGS="-arch `build_arch`"
+
 if [ -e ~/.bash_profile.local ]; then
   source ~/.bash_profile.local
 fi
