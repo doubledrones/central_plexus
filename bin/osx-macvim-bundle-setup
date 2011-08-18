@@ -22,6 +22,7 @@ resources = {
     'vim-vividchalk' => 'git://github.com/tpope/vim-vividchalk.git',
     'tabular'        => 'https://github.com/godlygeek/tabular.git',
     'vim-flog'       => 'https://github.com/fousa/vim-flog',
+    'rvm.vim'        => 'http://github.com/csexton/rvm.vim',
   },
   'misc' => {
     'vim-pathogen'   => 'http://github.com/tpope/vim-pathogen.git'

@@ -150,3 +150,6 @@ endfunction
 
 " Disable bell
 set vb
+
+" RVM.vim statusline
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\ %l,%c-%v\ %)%P 
