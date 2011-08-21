@@ -166,6 +166,7 @@ Fluid
 ncftp
 xz
 firefox-bin-pl
+GitX
 "
 
 echo "$PORTS" | while read line
