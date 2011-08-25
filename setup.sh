@@ -89,6 +89,7 @@ cd applicage
 #port selfupdate
 echo `port upgrade outdated` # run in sub-shell to ignore errors
 port install git-core
+ln -sf $HOME/.macports/bin/git $HOME/bit/git
 
 # Vim tmp directory
 if [ ! -d ~/.vim/tmp ]; then
