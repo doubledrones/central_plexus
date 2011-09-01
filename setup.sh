@@ -209,12 +209,4 @@ echo `open ~/Applications/MacPorts/Alfred.app/` # run in sub-shell to ignore err
 rm -rf ~/.macports/var/macports/distfiles/
 mkdir -p ~/.macports/var/macports/distfiles/
 
-# use it only when working on one account
-case $1 in
-  --sudo)
-    sudo $HOME/.macports/bin/port install -f macfuse Growl
-    port install sshfs
-    ;;
-esac
-
 postgres_local_create_directory
