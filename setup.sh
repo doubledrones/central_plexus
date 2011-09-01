@@ -88,7 +88,7 @@ source ~/.shell_aliases
 
 # applicage
 cd applicage
-`git pull`
+echo `git pull`
 ./install.sh
 #port selfupdate
 echo `port upgrade outdated` # run in sub-shell to ignore errors
