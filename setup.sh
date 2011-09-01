@@ -189,7 +189,7 @@ function is_laptop() {
   sysctl -n hw.model | grep "^MacBook"
 }
 
-if [ "`is_laptop`" -ne "" ]; then
+if [ -n "`is_laptop`" ]; then
   PORTS="$PORTS NetworkLocation"
 fi
 
