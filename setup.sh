@@ -100,6 +100,17 @@ if [ ! -d ~/.vim/tmp ]; then
   mkdir -p ~/.vim/tmp
 fi
 
+function osx_release() {
+  case `uname -r | cut -f 1 -d .` in
+    11)
+      echo "Lion"
+      ;;
+    10)
+      echo "Snow Leopard"
+      ;;
+  esac
+}
+
 # Setup MacVim
 $D_R/bin/osx-macvim-bundle-setup
 $D_R/bin/osx-macvim-color-setup
@@ -122,8 +133,10 @@ $D_R/bin/osx-capslock-disable
 # Magic Mouse setup
 $D_R/bin/osx-magic-mouse-two-button-enable
 
-# Disable annoying Front Row keystroke
-$D_R/bin/osx-frontrow-disable
+if [ "`osx_release`" -ne "Lion" ]; then
+  # Disable annoying Front Row keystroke
+  $D_R/bin/osx-frontrow-disable
+fi
 
 # Lock screen on sleep and screen saver
 $D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
