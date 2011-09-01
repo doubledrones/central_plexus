@@ -156,7 +156,6 @@ mtr
 htop
 p5-app-ack
 pbzip2
-lzmautils
 watch
 wget
 macvim +ruby
