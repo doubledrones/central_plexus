@@ -35,9 +35,10 @@ do
   MY_RUBY_PATCH=`echo $MY_RUBY_VERSION | cut -f 2 -d :`
   MY_RUBY_VERSION=`echo $MY_RUBY_VERSION | cut -f 1 -d :`
   if [ ! -d ~/.rvm/rubies/$MY_RUBY_VERSION-$MY_RUBY_PATCH/ ]; then
-    if [ -d ~/.rvm/rubies/$MY_RUBY_VERSION-*/ ]; then
-      rvm uninstall $MY_RUBY_VERSION
-    fi
+    for RUBY_DIR in `ls -d ~/.rvm/rubies/$MY_RUBY_VERSION-*`
+    do
+      rvm uninstall `basename $RUBY_DIR`
+    done
     rvm install $MY_RUBY_VERSION -C --enable-pthread
   fi
 done
