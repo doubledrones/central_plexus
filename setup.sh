@@ -153,7 +153,6 @@ Alfred
 Things
 Evernote
 Dropbox
-NetworkLocation
 KeyboardMaestro
 Caffeine
 1Password
@@ -170,6 +169,14 @@ xz
 firefox-bin-pl
 GitX
 "
+
+function is_laptop() {
+  sysctl -n hw.model | grep "^MacBook"
+}
+
+if [ "`is_laptop`" -ne "" ]; then
+  PORTS="$PORTS NetworkLocation"
+fi
 
 echo "$PORTS" | while read line
 do
