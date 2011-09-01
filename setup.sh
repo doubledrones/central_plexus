@@ -1,5 +1,7 @@
 #!/bin/sh -ev
 
+chmod 700 $HOME
+
 D_R=`cd \`dirname $0\` ; pwd -P`
 
 DEFAULT_RVM_RUBY="ruby-1.9.2"
