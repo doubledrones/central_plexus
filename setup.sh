@@ -182,7 +182,10 @@ ncftp
 xz
 firefox-bin-pl
 GitX
+mongodb
 "
+
+gem install mongo
 
 function is_laptop() {
   sysctl -n hw.model | grep "^MacBook"
