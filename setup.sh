@@ -152,7 +152,6 @@ iTerm2
 Alfred
 Things
 Evernote
-Dropbox
 KeyboardMaestro
 Caffeine
 1Password
