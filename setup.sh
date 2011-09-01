@@ -133,7 +133,7 @@ $D_R/bin/osx-capslock-disable
 # Magic Mouse setup
 $D_R/bin/osx-magic-mouse-two-button-enable
 
-if [ "`osx_release`" -ne "Lion" ]; then
+if [ -z "`osx_release | grep Lion`" ]; then
   # Disable annoying Front Row keystroke
   $D_R/bin/osx-frontrow-disable
 fi
