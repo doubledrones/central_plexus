@@ -5,7 +5,7 @@ case `osx-version-minor` in
     defaults read 'Apple Global Domain' 'AppleLanguages' | cut -f 2 -d \( | cut -f 1 -d ,
     ;;
   *)
-    defaults read .GlobalPreferences AppleLanguages 2>/dev/null
+    defaults read .GlobalPreferences AppleLanguages >/dev/null
     if [ $? -eq 0 ]; then
       defaults read .GlobalPreferences AppleLanguages | grep -v "^(" | head -n1 | sed 's/[ ,]//g'
     else
