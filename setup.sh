@@ -116,10 +116,8 @@ $D_R/bin/osx-macvim-bundle-setup
 $D_R/bin/osx-macvim-color-setup
 
 # Mac OS X Dock setup
-echo `$D_R/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 $D_R/bin/osx-dock-autohide-enable
 $D_R/bin/osx-dock-glass-disable
-$D_R/bin/osx-dock-lock
 echo `$D_R/bin/osx-dock-restart` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
