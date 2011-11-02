@@ -144,6 +144,7 @@ port install postgresql84-server +homedir
 
 PORTS="
 Alfred
+Dropbox
 1Password
 iTerm2
 Evernote
