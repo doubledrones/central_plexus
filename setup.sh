@@ -143,6 +143,16 @@ fi
 port install postgresql84-server +homedir
 
 PORTS="
+Alfred
+1Password
+iTerm2
+Evernote
+KeyboardMaestro
+Caffeine
+TextMate
+MindNode
+Fluid
+
 pkgconfig
 autoconf
 automake
@@ -161,20 +171,13 @@ tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
-iTerm2
-Alfred
-Evernote
-KeyboardMaestro
-Caffeine
-1Password
+
 aesutil
 aescrypt
 weex
 pwgen
 unrar
-TextMate
-MindNode
-Fluid
+
 ncftp
 xz
 firefox-bin-pl
