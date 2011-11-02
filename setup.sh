@@ -163,7 +163,6 @@ p5-crypt-ripemd160
 links
 iTerm2
 Alfred
-Things
 Evernote
 KeyboardMaestro
 Caffeine
