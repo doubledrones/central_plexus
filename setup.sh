@@ -134,10 +134,10 @@ $D_R/bin/osx-magic-mouse-two-button-enable
 if [ -z "`osx_release | grep Lion`" ]; then
   # Disable annoying Front Row keystroke
   $D_R/bin/osx-frontrow-disable
-fi
 
-# Lock screen on sleep and screen saver
-$D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
+  # Lock screen on sleep and screen saver
+  $D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
+fi
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
