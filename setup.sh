@@ -115,10 +115,8 @@ $D_R/bin/osx-macvim-bundle-setup
 $D_R/bin/osx-macvim-color-setup
 
 # Mac OS X Dock setup
-echo `$D_R/bin/osx-dock-remove-all-items` # run in sub-shell to ignore errors
 $D_R/bin/osx-dock-autohide-enable
 $D_R/bin/osx-dock-glass-disable
-$D_R/bin/osx-dock-lock
 echo `$D_R/bin/osx-dock-restart` # run in sub-shell to ignore errors
 
 # Mac OS X menubar setup
@@ -135,15 +133,26 @@ $D_R/bin/osx-magic-mouse-two-button-enable
 if [ -z "`osx_release | grep Lion`" ]; then
   # Disable annoying Front Row keystroke
   $D_R/bin/osx-frontrow-disable
-fi
 
-# Lock screen on sleep and screen saver
-$D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
+  # Lock screen on sleep and screen saver
+  $D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
+fi
 
 # Install caged postgresql84-server
 port install postgresql84-server +homedir
 
 PORTS="
+Alfred
+Dropbox
+1Password
+iTerm2
+Evernote
+KeyboardMaestro
+Caffeine
+TextMate
+MindNode
+Fluid
+
 pkgconfig
 autoconf
 automake
@@ -162,21 +171,13 @@ tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
-iTerm2
-Alfred
-Things
-Evernote
-KeyboardMaestro
-Caffeine
-1Password
+
 aesutil
 aescrypt
 weex
 pwgen
 unrar
-TextMate
-MindNode
-Fluid
+
 ncftp
 xz
 firefox-bin-pl

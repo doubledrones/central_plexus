@@ -1,4 +1,31 @@
-#!/bin/bash
+#!/usr/bin/env osascript
 
-defaults write /System/Library/LaunchDaemons/com.apple.WindowServer 'EnvironmentVariables' -dict 'CI_NO_BACKGROUND_IMAGE' 0
+set language to do shell script "osx-system-language"
 
+if (language is "en") then
+  set window_name to "Desktop & Screen Saver"
+  set click_action to "Translucent menu bar"
+else if (language is "pl") then
+  set window_name to "Wygaszacz i biurko"
+  set click_action to "Przezroczysty pasek menu"
+else
+  error "Unsupported language"
+end if
+
+tell application "System Preferences"
+  activate
+delay 1
+    set current pane to pane "com.apple.preference.desktopscreeneffect"
+
+tell application "System Events"
+  tell application process "System Preferences"
+delay 1
+    click checkbox "Translucent menu bar" of tab group 1 of window "Desktop & Screen Saver"
+
+delay 1
+
+end tell
+end tell
+end tell
+
+tell application "System Preferences" to quit
