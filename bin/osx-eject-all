@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+
+Dir["/Volumes/*/"].each do |dir|
+  next unless Pathname.new(dir).realpath.to_s == dir[0..-2]
+  `diskutil eject "#{dir}"`
+  `umount "#{dir}"`
+end
