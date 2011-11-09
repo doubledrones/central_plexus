@@ -172,6 +172,7 @@ tmux
 md5sha1sum
 p5-crypt-ripemd160
 links
+png2ico
 
 aesutil
 aescrypt
