@@ -145,11 +145,24 @@ function! s:align()
   endif
 endfunction
 
-" Enable live flog (http://blog.10to1.be/ruby/2011/02/13/vim-flog-plugin/)
-:silent exe "g:flog_enable"
-
 " Disable bell
 set vb
 
 " RVM.vim statusline
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\ %l,%c-%v\ %)%P 
+
+" Maximum column in which to search for syntax items.
+set synmaxcol=180
+
+function! s:SpeedUp()
+  set nowrap
+  set noincsearch
+endfunction
+
+function! s:SpeedNormal()
+  set wrap
+  set incsearch
+endfunction
+
+com! SpeedUp     call s:SpeedUp()
+com! SpeedNormal call s:SpeedNormal()
