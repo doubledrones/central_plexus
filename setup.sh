@@ -22,10 +22,7 @@ fi
 if [ ! -e ~/.bash_profile ]; then
   ln -s ~/projects/central_plexus/bash_profile ~/.bash_profile
 fi
-source ~/.bash_profile
-echo `rvm reload`
-source ~/.bash_profile
-rvm reload
+source ~/.rvm/scripts/rvm
 
 if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
   rvm install $DEFAULT_RVM_RUBY
