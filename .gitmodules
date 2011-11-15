@@ -3,4 +3,4 @@
 	url = git://github.com/doubledrones/dotmatrix.git
 [submodule "applicage"]
 	path = applicage
-	url = https://github.com/doubledrones/applicage.git
+	url = git://github.com/doubledrones/applicage.git
