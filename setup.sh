@@ -22,7 +22,7 @@ fi
 if [ ! -e ~/.bash_profile ]; then
   ln -s ~/projects/central_plexus/bash_profile ~/.bash_profile
 fi
-#source ~/.bash_profile
+source ~/.bash_profile
 
 rvm reload
 
