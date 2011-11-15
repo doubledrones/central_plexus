@@ -25,6 +25,7 @@ fi
 source ~/.bash_profile
 
 rvm reload
+rvm reload
 
 if [ ! -d ~/.rvm/rubies/$DEFAULT_RVM_RUBY-*/ ]; then
   rvm install $DEFAULT_RVM_RUBY
