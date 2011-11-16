@@ -45,3 +45,9 @@ ARCHFLAGS="-arch `build_arch`"
 if [ -e ~/.bash_profile.local ]; then
   source ~/.bash_profile.local
 fi
+
+case `uname  -r` in
+  11*) # Lion
+    export CC=/usr/bin/gcc-4.2
+    ;;
+esac
