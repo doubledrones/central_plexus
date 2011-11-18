@@ -158,6 +158,7 @@ libtool
 libiconv
 openssh
 
+axel
 mtr
 htop
 p5-app-ack
