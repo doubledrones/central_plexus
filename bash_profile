@@ -51,3 +51,5 @@ case `uname  -r` in
     export CC=/usr/bin/gcc-4.2
     ;;
 esac
+
+export RUBYOPT="-ropenssl"
