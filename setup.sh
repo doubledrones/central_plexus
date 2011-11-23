@@ -210,3 +210,9 @@ rm -rf ~/.macports/var/macports/distfiles/
 mkdir -p ~/.macports/var/macports/distfiles/
 
 postgres_local_create_directory
+
+if [ -n "`osx_release | grep Lion`" ]; then
+  echo
+  echo "You can also disable local time machine by: sudo tmutil disablelocal"
+  echo
+fi
