@@ -3,7 +3,10 @@ export LC_CTYPE="en_US.UTF-8"
 
 # prompt containing git branch
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+  PWD_MOUNT_VIA_SSH=`mount | grep \`pwd -P\` | grep "fuse4x"`
+  if [ -z "$PWD_MOUNT_VIA_SSH" ]; then
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+  fi
 }
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\[\033[01;34m\]\$\[\033[00m\] "
 
