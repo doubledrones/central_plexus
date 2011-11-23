@@ -1,10 +1,21 @@
 export TERM="xterm-256color"
 export LC_CTYPE="en_US.UTF-8"
 
+function pwd_mount_via_ssh() {
+  CURRENT_PWD=`pwd -P`
+  for SSH_MOUNTED in `mount | grep fuse4x | cut -f 3 -d " "`
+  do
+    case $CURRENT_PWD in
+      $SSH_MOUNTED | $SSH_MOUNTED/ | $SSH_MOUNTED/*)
+        return "yes"
+        ;;
+    esac
+  done
+}
+
 # prompt containing git branch
 function parse_git_branch {
-  PWD_MOUNT_VIA_SSH=`mount | grep \`pwd -P\` | grep "fuse4x"`
-  if [ -z "$PWD_MOUNT_VIA_SSH" ]; then
+  if [ -z "`pwd_mount_via_ssh`" ]; then
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
   fi
 }
