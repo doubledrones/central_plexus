@@ -150,6 +150,7 @@ Caffeine
 TextMate
 MindNode
 Fluid
+CCMenu
 
 pkgconfig
 autoconf
