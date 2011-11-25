@@ -1,3 +1,15 @@
 *.swp
 .DS_Store
 bin/git
+
+# haskell and git annex binaries
+bin/HMACTest
+bin/QuickTest
+bin/RSATest
+bin/SHA1Test
+bin/SymmetricTest
+bin/WordListTest
+bin/git-annex
+bin/git-annex-shell
+bin/git-union-merge
+bin/hs3
