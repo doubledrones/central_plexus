@@ -159,6 +159,11 @@ libtool
 libiconv
 openssh
 
+ossp-uuid
+md5sha1sum
+coreutils
+pcre
+
 axel
 mtr
 htop
@@ -168,7 +173,6 @@ watch
 wget
 macvim +ruby
 tmux
-md5sha1sum
 p5-crypt-ripemd160
 links
 png2ico
