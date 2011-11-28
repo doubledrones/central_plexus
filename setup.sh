@@ -221,3 +221,7 @@ if [ -n "`osx_release | grep Lion`" ]; then
   echo "You can also disable local time machine by: sudo tmutil disablelocal"
   echo
 fi
+
+echo
+echo "If you have administrator account you can also install git-annex via: sh git-annex-install.sh"
+echo
