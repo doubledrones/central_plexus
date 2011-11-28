@@ -13,4 +13,7 @@ export PATH="$PATH:$HOME/.macports/libexec/gnubin"
 export PATH="$HOME/.macports/bin:$PATH"
 
 sudo cabal update
+
+sudo chown -R `whoami` $HOME/Library/Haskell
+
 cabal install git-annex --bindir=$HOME/bin
