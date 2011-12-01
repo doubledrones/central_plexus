@@ -22,14 +22,14 @@ function parse_git_branch {
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(parse_git_branch)\[\033[01;34m\]\$\[\033[00m\] "
 
 # MacPorts
-export PATH="~/.macports/bin:~/.macports/sbin:$PATH"
+export PATH="$HOME/.macports/bin:$HOME/.macports/sbin:$PATH"
 export MANPATH="/Users/`whoami`/.macports/share/man:$MANPATH"
 
 # Postgresql 8.4 for building gems and dependent packages
 export PATH="$HOME/.macports/lib/postgresql84/bin/:$PATH"
 
 # Home directory binaries and scripts
-export PATH="~/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Ruby Version Manager
 if [[ -s /Users/`whoami`/.rvm/scripts/rvm ]] ; then source /Users/`whoami`/.rvm/scripts/rvm ; fi
