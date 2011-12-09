@@ -89,7 +89,7 @@ echo `git pull`
 ./install.sh
 #port selfupdate
 echo `port upgrade outdated` # run in sub-shell to ignore errors
-port install git-core
+port install git-core +svn
 ln -sf $HOME/.macports/bin/git $HOME/bin/git
 
 # Vim tmp directory
