@@ -129,6 +129,8 @@ nmap <D-r> :wall<CR>:Rake<CR>
 imap <D-r> <Esc>:wall<CR>:Rake<CR>
 nmap <D-R> :wall<CR>:.Rake<CR>
 imap <D-R> <Esc>:wall<CR>:.Rake<CR>
+nmap <silent> <C-D> :NERDTreeToggle<CR>
+imap <silent> <C-D> <Esc>:NERDTreeToggle<CR>
 
 " Cucumber table alignment
 " https://gist.github.com/287147
