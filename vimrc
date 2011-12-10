@@ -105,26 +105,26 @@ if has("gui_running")
 endif
 
 " Hot keys
-map <D-1> :tabn 1<CR>i
-imap <D-1> <Esc>:tabn 1<CR>i
-map <D-2> :tabn 2<CR>i
-imap <D-2> <Esc>:tabn 2<CR>i
-map <D-3> :tabn 3<CR>i
-imap <D-3> <Esc>:tabn 3<CR>i
-map <D-4> :tabn 4<CR>i
-imap <D-4> <Esc>:tabn 4<CR>i
-map <D-5> :tabn 5<CR>i
-imap <D-5> <Esc>:tabn 5<CR>i
-map <D-6> :tabn 6<CR>i
-imap <D-6> <Esc>:tabn 6<CR>i
-map <D-7> :tabn 7<CR>i
-imap <D-7> <Esc>:tabn 7<CR>i
-map <D-8> :tabn 8<CR>i
-imap <D-8> <Esc>:tabn 8<CR>i
-map <D-9> :tabn 9<CR>i
-imap <D-9> <Esc>:tabn 9<CR>i
-map <D-0> :tabn 10<CR>i
-imap <D-0> <Esc>:tabn 10<CR>i
+map <D-1> :tabn 1<CR>
+imap <D-1> <Esc>:tabn 1<CR>
+map <D-2> :tabn 2<CR>
+imap <D-2> <Esc>:tabn 2<CR>
+map <D-3> :tabn 3<CR>
+imap <D-3> <Esc>:tabn 3<CR>
+map <D-4> :tabn 4<CR>
+imap <D-4> <Esc>:tabn 4<CR>
+map <D-5> :tabn 5<CR>
+imap <D-5> <Esc>:tabn 5<CR>
+map <D-6> :tabn 6<CR>
+imap <D-6> <Esc>:tabn 6<CR>
+map <D-7> :tabn 7<CR>
+imap <D-7> <Esc>:tabn 7<CR>
+map <D-8> :tabn 8<CR>
+imap <D-8> <Esc>:tabn 8<CR>
+map <D-9> :tabn 9<CR>
+imap <D-9> <Esc>:tabn 9<CR>
+map <D-0> :tabn 10<CR>
+imap <D-0> <Esc>:tabn 10<CR>
 nmap <D-r> :wall<CR>:Rake<CR>
 imap <D-r> <Esc>:wall<CR>:Rake<CR>
 nmap <D-R> :wall<CR>:.Rake<CR>
