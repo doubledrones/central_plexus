@@ -7,6 +7,7 @@
 	dih = diff HEAD
 	diw = "diff --word-diff"
 	upstream = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+	ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
 [color]
 	branch = auto
 	diff = auto
