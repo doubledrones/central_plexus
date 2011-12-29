@@ -144,7 +144,6 @@ Alfred
 Dropbox
 1Password
 iTerm2
-Evernote
 KeyboardMaestro
 Caffeine
 TextMate
