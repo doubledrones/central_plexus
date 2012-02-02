@@ -24,6 +24,7 @@ resources = {
     'vim-flog'       => 'https://github.com/fousa/vim-flog',
     'rvm.vim'        => 'http://github.com/csexton/rvm.vim',
     'vim-less'       => 'https://github.com/groenewege/vim-less',
+    'apidock.vim'    => 'https://github.com/mileszs/apidock.vim'
   },
   'misc' => {
     'vim-pathogen'   => 'http://github.com/tpope/vim-pathogen.git'
