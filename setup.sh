@@ -178,7 +178,6 @@ unrar
 
 ncftp
 xz
-firefox-bin-pl
 GitX
 mongodb
 "
