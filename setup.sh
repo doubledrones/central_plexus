@@ -145,6 +145,8 @@ MindNode
 Fluid
 CCMenu
 
+chromedriver
+
 pkgconfig
 autoconf
 automake
