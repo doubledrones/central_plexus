@@ -57,4 +57,8 @@ if has("gui_running")
 
   "Rails Colors
   highlight link railsMethod Type
+
+  "Dim background after 80 characters
+  let &l:cc = join(range(80,10000),',')
+  hi ColorColumn ctermbg=black guibg=black
 end
