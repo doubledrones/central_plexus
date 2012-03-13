@@ -21,7 +21,6 @@ resources = {
     'vim-unimpaired'    => 'git://github.com/tpope/vim-unimpaired.git',
     'vim-vividchalk'    => 'git://github.com/tpope/vim-vividchalk.git',
     'tabular'           => 'https://github.com/godlygeek/tabular.git',
-    'vim-flog'          => 'https://github.com/fousa/vim-flog',
     'rvm.vim'           => 'http://github.com/csexton/rvm.vim',
     'vim-less'          => 'https://github.com/groenewege/vim-less',
     'apidock.vim'       => 'https://github.com/mileszs/apidock.vim',
