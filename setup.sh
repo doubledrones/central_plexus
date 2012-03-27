@@ -8,7 +8,9 @@ DEFAULT_RVM_RUBY="ruby-1.9.2"
 
 export GEM_HOME="$HOME/.gem/ruby/1.8"
 
-sh $D_R/rvm_install.sh
+RVM_VERSION="1.11.2"
+
+sh $D_R/rvm_install.sh $RVM_VERSION
 
 if [ -L ~/.bash_profile ]; then
   rm ~/.bash_profile
