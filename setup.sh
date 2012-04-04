@@ -132,8 +132,8 @@ if [ -z "`osx_release | grep Lion`" ]; then
   $D_R/bin/osx-lock-screen-on-sleep-or-screen-saver
 fi
 
-# Install caged postgresql84-server
-port install postgresql84-server +homedir
+# Install caged postgresql91-server
+port install postgresql91-server +no_root
 
 PORTS="
 Alfred
