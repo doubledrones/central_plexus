@@ -19,11 +19,12 @@ function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
   fi
 }
+
 function timestamp {
   echo "<`date '+%Y-%m-%d %H:%M'`>"
 }
 
-PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(timestamp)\[\033[01;34m\] \[\033[01;32m\]\$(parse_git_branch)\[\033[01;34m\]\$\[\033[00m\] "
+PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \[\033[01;32m\]\$(timestamp)\[\033[01;34m\] \[\033[01;32m\]\$(parse_git_branch)\n\[\033[01;34m\]\$\[\033[00m\] "
 
 # MacPorts
 export PATH="$HOME/.macports/bin:$HOME/.macports/sbin:$PATH"
