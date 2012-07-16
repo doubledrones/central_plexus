@@ -31,7 +31,7 @@ export PATH="$HOME/.macports/bin:$HOME/.macports/sbin:$PATH"
 export MANPATH="/Users/`whoami`/.macports/share/man:$MANPATH"
 
 # Postgresql 8.4 for building gems and dependent packages
-export PATH="$HOME/.macports/lib/postgresql84/bin/:$PATH"
+export PATH="$HOME/.macports/lib/postgresql91/bin/:$PATH"
 
 # Home directory binaries and scripts
 export PATH="$HOME/bin:$PATH"
